@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Required Meta Tags Always Come First -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Title -->
+  <title>Boda Bea y Pablo</title>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="/assets/img/logo.png">
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- CSS Implementing Plugins -->
+  <link rel="stylesheet" href="/assets/vendor/bootstrap-icons/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="/assets/vendor/hs-mega-menu/dist/hs-mega-menu.min.css">
+
+  <!-- CSS Unify Template -->
+  <link rel="stylesheet" href="/assets/css/theme.css">
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(function(){
+      $("#header").load("/template/header.html");
+      $("#footer").load("/template/footer.html");
+    });
+  </script>
+
+<style>
+    /* Estilo de la hero section */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full screen height */
+  background-image: url('/galeria/jardines-1.jpeg'); /* Reemplaza con tu URL de imagen */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contenido dentro de la hero section */
+.hero-content {
+  position: relative;
+  z-index: 2; /* Asegura que el contenido esté encima de la capa */
+  text-align: center;
+  color: #fff; /* Asegura que el texto sea blanco */
+  padding: 20px;
+}
+
+  </style>
+
+</head>
+
+<body>
+  <!-- ========== HEADER ========== -->
+  <header id="header" class="navbar navbar-expand-lg navbar-end navbar-light navbar-absolute-top navbar-show-hide bg-white"
+          data-hs-header-options='{
+            "fixMoment": 0,
+            "fixEffect": "slide"
+          }'></header>
+
+  <!-- ========== END HEADER ========== -->
+
+  <!-- ========== MAIN CONTENT ========== -->
+  <main id="content" role="main">
+    <!-- Hero -->
+    <div class="hero">
+        <div class="hero-content rounded-3 bg-white" style="opacity: 80%;">
+          <h1 class="display-4">Boda de Bea y Pablo</h1>
+          <p class="lead">13 de septiembre de 2025</p>
+          <div class="js-countdown row">
+            <div class="col-3">
+              <h2 class="js-cd-days h1 text-primary mb-0"></h2>
+              <h5 class="mb-0">Días</h5>
+            </div>
+            <!-- End Col -->
+            <div class="col-3">
+              <h2 class="js-cd-hours h1 text-primary mb-0"></h2>
+              <h5 class="mb-0">Horas</h5>
+            </div>
+            <!-- End Col -->
+            <div class="col-3">
+              <h2 class="js-cd-minutes h1 text-primary mb-0"></h2>
+              <h5 class="mb-0">Minutos</h5>
+            </div>
+            <!-- End Col -->
+            <div class="col-3">
+              <h2 class="js-cd-seconds h1 text-primary mb-0"></h2>
+              <h5 class="mb-0">Segundos</h5>
+            </div>
+            <!-- End Col -->
+          </div>
+          <!-- End Row -->
+        </div>
+      </div>
+
+    <!-- End Hero -->
+
+
+    <!-- Step Features -->
+    <div class="container content-space-1 content-space-lg-3">
+
+      <!-- Heading -->
+      <div class="w-lg-65 text-center mx-lg-auto mb-5 mb-sm-7 mb-lg-10">
+        <h2>Lugar de celebración</h2>
+        <p>La misa y posterior celebración se van a llevar acabo en el Pazo de San Lorenzo en Santiago de Compostela. El pazo no dispone de parking y dada la céntrica ubicación de pazo no va a haber servicios de autobuses. Recomendamos acudir al pazo con tiempo y caminando o en taxi dependiendo de la cercanía del alojamiento.</p>
+      </div>
+      <!-- End Heading -->
+
+      <!-- Mapa del pazo -->
+      <div class="ratio ratio-16x9  mb-5">
+        <iframe class="rounded"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2239.401658396633!2d-8.559226153667096!3d42.877973048865286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2efe697f7d8de7%3A0x114f9b52ff93c6de!2sPazo%20de%20San%20Lorenzo%20de%20Trasouto!5e1!3m2!1ses!2ses!4v1733578276226!5m2!1ses!2ses"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+      <!-- End Mapa del pazo -->
+
+  </main>
+  <!-- ========== END MAIN CONTENT ========== -->
+
+  <!-- ========== FOOTER ========== -->
+  <footer id="footer" class="bg-dark"></footer>
+  <!-- ========== END FOOTER ========== -->
+
+  <!-- ========== SECONDARY CONTENTS ========== -->
+  <!-- Go To -->
+  <a class="js-go-to go-to position-fixed" href="javascript:;" style="visibility: hidden;"
+     data-hs-go-to-options='{
+       "offsetTop": 700,
+       "position": {
+         "init": {
+           "right": "2rem"
+         },
+         "show": {
+           "bottom": "2rem"
+         },
+         "hide": {
+           "bottom": "-2rem"
+         }
+       }
+     }'>
+    <i class="bi-chevron-up"></i>
+  </a>
+  <!-- ========== END SECONDARY CONTENTS ========== -->
+
+  <!-- JS Global Compulsory  -->
+  <script src="/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- JS Implementing Plugins -->
+  <script src="/assets/vendor/hs-header/dist/hs-header.min.js"></script>
+  <script src="/assets/vendor/hs-mega-menu/dist/hs-mega-menu.min.js"></script>
+  <script src="/assets/vendor/hs-go-to/dist/hs-go-to.min.js"></script>
+
+  <!-- JS Unify -->
+  <script src="/assets/js/theme.min.js"></script>
+
+  <script src="/assets/vendor/countdown/countdown.js"></script>
+
+  <script>
+    (function() {
+      // INITIALIZATION OF COUNTDOWN
+      // =======================================================
+      const oneYearFromNow = new Date()
+
+      document.querySelectorAll('.js-countdown').forEach(item => {
+        const days = item.querySelector('.js-cd-days'),
+          hours = item.querySelector('.js-cd-hours'),
+          minutes = item.querySelector('.js-cd-minutes'),
+          seconds = item.querySelector('.js-cd-seconds')
+
+        countdown(new Date(2025, 8, 13, 13, 0),
+          ts => {
+            days.innerHTML = ts.days
+            hours.innerHTML = ts.hours
+            minutes.innerHTML = ts.minutes
+            seconds.innerHTML = ts.seconds
+          },
+          countdown.DAYS | countdown.HOURS | countdown.MINUTES | countdown.SECONDS
+        )
+      })
+    })()
+  </script>
+
+  <!-- JS Plugins Init. -->
+  <script>
+    (function() {
+      // INITIALIZATION OF NAVBAR
+      // =======================================================
+      new HSHeader('#header').init()
+
+
+      // INITIALIZATION OF MEGA MENU
+      // =======================================================
+      const megaMenu = new HSMegaMenu('.js-mega-menu', {
+        desktop: {
+          position: 'left'
+        }
+      })
+
+
+      // INITIALIZATION OF GO TO
+      // =======================================================
+      new HSGoTo('.js-go-to')
+    })()
+  </script>
+</body>
+</html>
+
