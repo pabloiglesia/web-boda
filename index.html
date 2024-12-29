@@ -33,7 +33,7 @@
 
 <body>
   <!-- ========== HEADER ========== -->
-  <header id="header" class="navbar navbar-expand-lg navbar-end navbar-light navbar-absolute-top navbar-show-hide"
+  <header id="header" class="navbar navbar-expand-lg navbar-end navbar-light navbar-absolute-top navbar-show-hide bg-white"
           data-hs-header-options='{
             "fixMoment": 0,
             "fixEffect": "slide"
@@ -44,69 +44,352 @@
   <!-- ========== MAIN CONTENT ========== -->
   <main id="content" role="main">
     <!-- Hero -->
-    <div class="container content-space-t-3">
-      <div class="row justify-content-lg-between align-items-lg-center">
-        <div class="col-lg-5 mb-5 mb-lg-0">
-          <div class="mb-5">
-            <h1 class="display-4 text-dark mb-5">Boda de <span class="text-primary">Bea y Pablo</span></h1>
-            <p class="fs-3">Feature-rich components and designed demo pages help you create the best possible products.</p>
+    <div class="hero">
+      <div class="hero-content rounded-3 bg-white p-5 text-center" style="opacity: 80%;">
+          <!-- <h1 class="display-4">Boda de Bea y Pablo</h1> -->
+          <div class="js-countdown row">
+          <div class="col-3">
+              <h2 class="js-cd-days h1 text-primary mb-0"></h2>
+              <h5 class="mb-0">Días</h5>
           </div>
-
-          <div class="d-grid d-sm-flex gap-3 mb-5">
-            <a class="btn btn-primary" href="#">Request demo</a>
-            <a class="btn btn-ghost-dark btn-pointer" href="#">Sign up free</a>
+          <!-- End Col -->
+          <div class="col-3">
+              <h2 class="js-cd-hours h1 text-primary mb-0"></h2>
+              <h5 class="mb-0">Horas</h5>
           </div>
-        </div>
-        <!-- End Col -->
-
-        <div class="col-lg-6">
-          <div class="position-relative">
-            <div class="position-relative">
-              <img class="img-fluid" src="/assets/img/950x950/img1.jpg" alt="Image Description">
-
-              <div class="position-absolute bottom-0 end-0">
-                <img class="w-100" src="/assets/svg/illustrations/cubics.svg" alt="SVG" style="max-width: 30rem;">
-              </div>
-            </div>
-
-            <!-- Media -->
-            <div class="d-inline-block position-absolute top-0 start-0 bg-white w-100 rounded-pill shadow-sm p-2 mt-5 ms-n5" style="max-width: 12rem;">
-              <div class="d-flex align-items-center">
-                <div class="flex-shrink-0">
-                  <span class="avatar avatar-sm avatar-circle">
-                    <img class="avatar-img" src="/assets/img/160x160/img10.jpg" alt="Image Description">
-                  </span>
-                </div>
-                <div class="flex-grow-1 ms-2">
-                  <div class="fs-5 fw-bold mb-0">Julia</div>
-                  <span class="d-block fs-6">Fantastic theme!</span>
-                </div>
-              </div>
-            </div>
-            <!-- End Media -->
-
-            <!-- Media -->
-            <div class="d-inline-block position-absolute bottom-0 start-0 bg-warning w-100 rounded-pill shadow-sm p-2 mb-10 ms-n10" style="max-width: 16rem;">
-              <div class="d-flex align-items-center">
-                <div class="flex-shrink-0">
-                  <span class="avatar avatar-sm avatar-circle">
-                    <img class="avatar-img" src="/assets/img/160x160/img3.jpg" alt="Image Description">
-                  </span>
-                </div>
-                <div class="flex-grow-1 ms-2">
-                  <div class="fs-5 fw-bold text-dark mb-0">Michael</div>
-                  <span class="d-block fs-6 text-dark">Excellent documentation 🔥👋</span>
-                </div>
-              </div>
-            </div>
-            <!-- End Media -->
+          <!-- End Col -->
+          <div class="col-3">
+              <h2 class="js-cd-minutes h1 text-primary mb-0"></h2>
+              <h5 class="mb-0">Minutos</h5>
           </div>
-        </div>
-        <!-- End Col -->
+          <!-- End Col -->
+          <div class="col-3">
+              <h2 class="js-cd-seconds h1 text-primary mb-0"></h2>
+              <h5 class="mb-0">Segundos</h5>
+          </div>
+          <!-- End Col -->
+          </div>
+          <!-- End Row -->
+          <p class="lead mt-3">13 de septiembre de 2025</p>
       </div>
-      <!-- End Row -->
-    </div>
+  </div>
     <!-- End Hero -->
+
+    <!-- Mapa -->
+    <div class="container content-space-1 content-space-lg-3">
+
+      <!-- Heading -->
+      <div class="w-lg-65 text-center mx-lg-auto mb-5 mb-sm-7 mb-lg-10">
+        <h2>Lugar de celebración</h2>
+        <p>La misa y posterior celebración se van a llevar acabo en el Pazo de San Lorenzo en Santiago de Compostela. El pazo no dispone de parking y dada la céntrica ubicación de pazo no va a haber servicios de autobuses. Recomendamos acudir al pazo con tiempo y caminando o en taxi dependiendo de la cercanía del alojamiento.</p>
+      </div>
+      <!-- End Heading -->
+
+      <!-- Mapa del pazo -->
+      <div class="ratio ratio-16x9  mb-5">
+        <iframe class="rounded"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2239.401658396633!2d-8.559226153667096!3d42.877973048865286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2efe697f7d8de7%3A0x114f9b52ff93c6de!2sPazo%20de%20San%20Lorenzo%20de%20Trasouto!5e1!3m2!1ses!2ses!4v1733578276226!5m2!1ses!2ses"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+      <!-- End Mapa del pazo -->
+    </div>
+
+      <!-- Día de la boda -->
+    <div class="">
+      <div class="container content-space-t-1 content-space-t-lg-3">
+        <div class="w-lg-65 text-center mx-lg-auto mb-5 mb-sm-7 mb-lg-10">
+          <h2>Detalles del día</h2>
+          <p>A continuación, se detalla el horario de la celebración y el orden de los diferentes momentos que vamos a vivir.</p>
+        </div>
+
+        <div class="w-lg-75 mx-lg-auto">
+          <!-- List Timeline -->
+          <ul class="list-unstyled list-timeline list-py-3">
+            <!-- Card Iglesia -->
+            <li class="list-timeline-item">
+              <a class="card card-sm card-transition-zoom" href="#">
+                <div class="card-transition-zoom-item">
+                  <img class="card-img" src="/galeria/dia-boda/iglesia-2.jpeg" alt="Image Description">
+                </div>
+                <div class="card-img-overlay top-auto">
+                  <div class="d-flex justify-content-end flex-column bg-white rounded-3 p-4">
+                    <h4 class="card-title"><span class="fs-2 text-primary">01.</span> Ceremonia religiosa</h4>
+                    <p class="card-text">La misa dará comienzo a las 13:00 en la capilla que se encuentra en el interior del pazo.</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <!-- End Card Iglesia -->
+            <!-- Card Aperitivo -->
+            <li class="list-timeline-item ms-auto">
+              <a class="card card-sm card-transition-zoom" href="#">
+                <div class="card-transition-zoom-item">
+                  <img class="card-img" src="/galeria/dia-boda/boj.jpg" alt="Image Description">
+                </div>
+                <div class="card-img-overlay top-auto">
+                  <div class="d-flex justify-content-end flex-column bg-white rounded-3 p-4">
+                    <h4 class="card-title"><span class="fs-2 text-primary">02.</span> Aperitivo en los jardines o salón interior</h4>
+                    <p class="card-text">Al terminar la misa, el personal del pazo os guiará a los jardines o a uno de los salones interiores, en función de la climatología, para poder reencontraros con nosotros tras la misa y comenzar la celebración.</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <!-- End Card Aperitivo -->
+            <!-- Card Banquete -->
+            <li class="list-timeline-item">
+              <a class="card card-sm card-transition-zoom" href="#">
+                <div class="card-transition-zoom-item">
+                  <img class="card-img" src="/galeria/dia-boda/mesas-claustro.jpeg" alt="Image Description">
+                </div>
+                <div class="card-img-overlay top-auto">
+                  <div class="d-flex justify-content-end flex-column bg-white rounded-3 p-4">
+                    <h4 class="card-title"><span class="fs-2 text-primary">03.</span> Comida en el claustro</h4>
+                    <p class="card-text">Tras el aperitivo nos dirigiremos al claustro del pazo para disfrutar de la comida.</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <!-- End Card Banquete -->
+            <!-- Card Fiesta -->
+            <li class="list-timeline-item ms-auto">
+              <a class="card card-sm card-transition-zoom" href="#">
+                <div class="card-transition-zoom-item">
+                  <img class="card-img" src="/galeria/dia-boda/fiesta-2.jpg" alt="Image Description">
+                </div>
+                <div class="card-img-overlay top-auto">
+                  <div class="d-flex justify-content-end flex-column bg-white rounded-3 p-4">
+                    <h4 class="card-title"><span class="fs-2 text-primary">04.</span> Fiesta</h4>
+                    <p class="card-text">Esperamos que hayáis cogido energía en la comida porque os queremos dándolo todo en la pista de baile.</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <!-- End Card Fiesta -->
+          </ul>
+          <!-- End List Timeline -->
+        </div>
+      </div>
+    </div>
+    <!-- End Día de la boda -->
+
+    <!-- Lista de novios -->
+    <div class="container content-space-t-1 content-space-t-lg-3">
+      <!-- Card Grid -->
+      <div class="overflow-hidden">
+        <div class="container content-space-1 content-space-b-lg-3">
+          <!-- Heading -->
+          <div class="w-lg-65 text-center mx-lg-auto mb-5 mb-sm-7 mb-lg-10">
+            <h1>Participa en nuestra historia</h1>
+            <p>Para nosotros lo más importante es tú compañía en nuestro día más especial. Si de todas formas quieres formar parte del inicio de nuestra aventura, estas son algunas experiencias y colaboraciones en las que nos puedes ayudar.</p>
+          </div>
+          <!-- End Heading -->
+
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 gx-7">
+            <div class="col mb-7 mb-md-10">
+              <!-- Card -->
+            <!-- <a class="card card-ghost card-transition-zoom h-100" href="#" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto" data-bs-content="Prueba"> -->
+              <a class="card card-ghost card-transition-zoom h-100" data-bs-toggle="collapse" href="#Inmersion" role="button">
+              <div class="card-pinned card-transition-zoom-item">
+                <img class="card-img" src="/galeria/regalos/tiburon-blanco.png" alt="Image Description">
+              </div>
+              <div class="card-body">
+                <h4>Inmersión con tiburón blanco</h4>
+                <p class="card-text">Todos los que conocéis a Bea sabeis la ilusión que le haría poder ver un tiburón de cerca. En nuestra luna de miel, queremos hacer una inmersión con tiburones blanco para que por fin pueda ver uno de cerca.</p>
+              </div>
+
+              <div class="collapse" id="Inmersion">
+                <div class="alert alert-soft-primary" role="alert">
+                  <b>Participa a través del siguiente IBAN:</b> ES8515830001129192861889
+                  <br>
+                  <b>Código BIC/SWIFT:</b> REVOESM2
+                  <br>
+                  <b>Concepto:</b> Inmersión con tiburón blanco
+                </div>
+              </div>
+
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+
+              <div class="card-footer">
+                <span class="card-link">Participa</span>
+              </div>
+            </a>
+              <!-- End Card -->
+            </div>
+            <!-- End Col -->
+
+            <div class="col mb-7 mb-md-10">
+              <!-- Card -->
+              <a class="card card-ghost card-transition-zoom h-100" href="./blog-article.html">
+                <div class="card-transition-zoom-item">
+                  <img class="card-img" src="/assets/img/580x480/img15.jpg" alt="Image Description">
+                </div>
+
+                <div class="card-body">
+                  <h4>Onsite</h4>
+                  <p class="card-text">Optimize your in-person experience with best-in-class capabilities like badge printing and lead retrieval</p>
+                </div>
+
+                <div class="card-footer">
+                  <span class="card-link">Read more</span>
+                </div>
+              </a>
+              <!-- End Card -->
+            </div>
+            <!-- End Col -->
+
+            <div class="col mb-7 mb-md-10">
+              <!-- Card -->
+              <a class="card card-borderless card-transition h-100 bg-img-end" href="./blog-article.html" style="background-image: url(/assets/svg/components/card-12.svg); min-height: 15rem;">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between flex-column h-100">
+                    <div class="mb-1">
+                      <span class="card-title fs-3 text-white"><span class="fw-bold">Unify</span> Press publishes books about economic and technological advancement.</span>
+                    </div>
+                    <div class="mt-1">
+                      <span class="card-link link-light">Visit the site</span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <!-- End Card -->
+            </div>
+            <!-- End Col -->
+
+            <div class="col mb-7 mb-md-10">
+              <!-- Card -->
+              <a class="card card-ghost card-transition-zoom h-100" href="./blog-article.html">
+                <div class="card-transition-zoom-item">
+                  <img class="card-img" src="/assets/img/580x480/img7.jpg" alt="Image Description">
+                </div>
+
+                <div class="card-body">
+                  <h4>The complete guide to OKRs</h4>
+                  <p class="card-text">How to make objectives and key results work for your company</p>
+                </div>
+
+                <div class="card-footer">
+                  <span class="card-link">Read more</span>
+                </div>
+              </a>
+              <!-- End Card -->
+            </div>
+            <!-- End Col -->
+
+            <div class="col mb-7 mb-md-10">
+              <!-- Card -->
+              <a class="card card-ghost card-transition-zoom h-100" href="./blog-article.html">
+                <div class="card-pinned card-transition-zoom-item">
+                  <img class="card-img" src="/assets/img/580x480/img8.jpg" alt="Image Description">
+                  <span class="badge bg-dark text-white card-pinned-top-end">Sponsored</span>
+                </div>
+
+                <div class="card-body">
+                  <h4>People program models</h4>
+                  <p class="card-text">Six approaches to bringing your People strategy to life</p>
+                </div>
+
+                <div class="card-footer">
+                  <span class="card-link">Read more</span>
+                </div>
+              </a>
+              <!-- End Card -->
+            </div>
+            <!-- End Col -->
+
+            <div class="col mb-7 mb-md-10">
+              <!-- Card -->
+              <a class="card card-ghost card-transition-zoom h-100" href="./blog-article.html">
+                <div class="card-transition-zoom-item">
+                  <img class="card-img" src="/assets/img/580x480/img9.jpg" alt="Image Description">
+                </div>
+
+                <div class="card-body">
+                  <h4>HR calendar 2021</h4>
+                  <p class="card-text">Workplace holidays, important deadlines, and monthly People strategy advice.</p>
+                </div>
+
+                <div class="card-footer">
+                  <span class="card-link">Read more</span>
+                </div>
+              </a>
+              <!-- End Card -->
+            </div>
+            <!-- End Col -->
+
+            <div class="col mb-7 mb-md-10">
+              <!-- Card -->
+              <a class="card card-ghost card-transition-zoom h-100" href="./blog-article.html">
+                <div class="card-transition-zoom-item">
+                  <img class="card-img" src="/assets/img/580x480/img18.jpg" alt="Image Description">
+                </div>
+
+                <div class="card-body">
+                  <h4>The ultimate guide to employee development</h4>
+                  <p class="card-text">How to use job levels, competencies, and growth plans to make career advancement crystal clear.</p>
+                </div>
+
+                <div class="card-footer">
+                  <span class="card-link">Read more</span>
+                </div>
+              </a>
+              <!-- End Card -->
+            </div>
+            <!-- End Col -->
+
+            <div class="col mb-7 mb-md-10">
+              <!-- Card -->
+              <a class="card card-ghost card-transition-zoom h-100" href="./blog-article.html">
+                <div class="card-pinned card-transition-zoom-item">
+                  <img class="card-img" src="/assets/img/580x480/img17.jpg" alt="Image Description">
+                  <span class="badge bg-dark text-white card-pinned-top-end">Sponsored</span>
+                </div>
+
+                <div class="card-body">
+                  <h4>The ultimate guide to employee engagement surveys</h4>
+                  <p class="card-text">A how-to guide for running and acting on your next employee engagement survey.</p>
+                </div>
+
+                <div class="card-footer">
+                  <span class="card-link">Read more</span>
+                </div>
+              </a>
+              <!-- End Card -->
+            </div>
+            <!-- End Col -->
+
+            <div class="col mb-7 mb-md-10">
+              <!-- Card -->
+              <a class="card card-ghost card-transition-zoom h-100" href="./blog-article.html">
+                <div class="card-transition-zoom-item">
+                  <img class="card-img" src="/assets/img/580x480/img16.jpg" alt="Image Description">
+                </div>
+
+                <div class="card-body">
+                  <h4>The evolution of performance management</h4>
+                  <p class="card-text">The story of how we ended up with performance reviews</p>
+                </div>
+
+                <div class="card-footer">
+                  <span class="card-link">Read more</span>
+                </div>
+              </a>
+              <!-- End Card -->
+            </div>
+            <!-- End Col -->
+          </div>
+          <!-- End Row -->
+
+        </div>
+      </div>
+      <!-- End Card Grid -->
+
+    </div>
+    <!-- End Lista de novios -->
 
   </main>
   <!-- ========== END MAIN CONTENT ========== -->
@@ -147,6 +430,34 @@
 
   <!-- JS Unify -->
   <script src="/assets/js/theme.min.js"></script>
+
+  <!-- JS Countdown -->
+ <script src="/assets/vendor/countdown/countdown.js"></script>
+
+  <script>
+    (function() {
+      // INITIALIZATION OF COUNTDOWN
+      // =======================================================
+      const oneYearFromNow = new Date()
+
+      document.querySelectorAll('.js-countdown').forEach(item => {
+        const days = item.querySelector('.js-cd-days'),
+          hours = item.querySelector('.js-cd-hours'),
+          minutes = item.querySelector('.js-cd-minutes'),
+          seconds = item.querySelector('.js-cd-seconds')
+
+        countdown(new Date(2025, 8, 13, 13, 0),
+          ts => {
+            days.innerHTML = ts.days
+            hours.innerHTML = ts.hours
+            minutes.innerHTML = ts.minutes
+            seconds.innerHTML = ts.seconds
+          },
+          countdown.DAYS | countdown.HOURS | countdown.MINUTES | countdown.SECONDS
+        )
+      })
+    })()
+  </script>
 
   <!-- JS Plugins Init. -->
   <script>
