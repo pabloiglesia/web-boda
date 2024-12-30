@@ -1,4 +1,8 @@
-Regalo,Coste_Total,Recaudado,Pct_Recaudado
-InmersionTiburones,150,0,30
-
-
+Regalo,Coste_Total,Recaudado,imagen,titulo,descripcion,concepto
+InmersionTiburones,150,50,/galeria/regalos/tiburon-blanco.png,Inmnersión con tiburón blanco,Todos los que conocéis a Bea sabeis la ilusión que le haría poder ver un tiburón de cerca. En nuestra luna de miel, queremos hacer una inmersión con tiburones blanco para que por fin pueda ver uno de cerca.,Inmnersión con tiburón blanco
+ViajeParis,2000,500,/galeria/regalos/prueba6.jpeg,Viaje a París,Un viaje romántico a París para disfrutar de la ciudad del amor.,Viaje a París
+CenaRestaurante,300,150,/galeria/regalos/prueba1.jpeg,Cena en un restaurante,Una cena especial en un restaurante de lujo.,Cena en un restaurante
+ExcursionBarco,500,200,/galeria/regalos/prueba2.jpeg,Excursión en barco,Una excursión en barco para disfrutar del mar.,Excursión en barco
+ClaseCocina,200,100,/galeria/regalos/prueba3.jpeg,Clase de cocina,Una clase de cocina para aprender nuevas recetas.,Clase de cocina
+EspectaculoTeatro,150,80,/galeria/regalos/prueba4.jpeg,Espectáculo de teatro,Entradas para un espectáculo de teatro.,Espectáculo de teatro
+NocheHotel,600,300,/galeria/regalos/prueba5.jpeg,Noche en un hotel,Una noche en un hotel de lujo.,Noche en un hotel
