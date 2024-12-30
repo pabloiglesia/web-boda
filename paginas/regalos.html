@@ -26,14 +26,13 @@
     $(function(){
       $("#header").load("/template/header.html");
       $("#footer").load("/template/footer.html");
+      $("#lista-novios").load("/template/regalos.html");
     });
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/papaparse/papaparse.min.js"></script>
-  <script src="/assets/js/Tracker_Progress_Bar.js"></script>
 
 </head>
 
-<body onload="cargarRegalos()">
+<body>
   <!-- ========== HEADER ========== -->
   <header id="header" class="navbar navbar-expand-lg navbar-end navbar-light navbar-absolute-top navbar-show-hide"
           data-hs-header-options='{
@@ -45,25 +44,7 @@
 
   <!-- ========== MAIN CONTENT ========== -->
   <main id="content" role="main">
-    <div class="container content-space-t-1 content-space-t-lg-3">
-    <!-- Card Grid -->
-    <div class="overflow-hidden">
-      <div class="container content-space-1 content-space-b-lg-3">
-        <!-- Heading -->
-        <div class="w-lg-65 text-center mx-lg-auto mb-5 mb-sm-7 mb-lg-10">
-          <h1>Participa en nuestra historia</h1>
-          <p>Para nosotros lo más importante es tú compañía en nuestro día más especial. Si de todas formas quieres formar parte del inicio de nuestra aventura, estas son algunas experiencias y colaboraciones en las que nos puedes ayudar.</p>
-        </div>
-        <!-- End Heading -->
-
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 gx-7" id="regalos">
-
-        </div>
-        <!-- End Row -->
-      </div>
-    </div>
-    <!-- End Card Grid -->
-  </div>
+    <div id="lista-novios"></div>
   </main>
   <!-- ========== END MAIN CONTENT ========== -->
 
