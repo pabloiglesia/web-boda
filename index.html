@@ -27,6 +27,9 @@
     $(function(){
       $("#header").load("/template/header.html");
       $("#footer").load("/template/footer.html");
+      $("#mapa").load("/template/mapa.html");
+      $("#lista-novios").load("/template/regalos.html");
+      $("#hero-section").load("/template/hero-section.html");
     });
   </script>
 </head>
@@ -43,38 +46,10 @@
 
   <!-- ========== MAIN CONTENT ========== -->
   <main id="content" role="main">
-    <!-- Hero -->
-    <div class="hero">
-      <div class="hero-content rounded-3 bg-white bg-opacity-75 p-5 text-center">
-          <!-- <h1 class="display-4">Boda de Bea y Pablo</h1> -->
-          <div class="js-countdown row">
-          <div class="col-3">
-              <h2 class="js-cd-days h1 text-primary mb-0"></h2>
-              <h5 class="mb-0">Días</h5>
-          </div>
-          <!-- End Col -->
-          <div class="col-3">
-              <h2 class="js-cd-hours h1 text-primary mb-0"></h2>
-              <h5 class="mb-0">Horas</h5>
-          </div>
-          <!-- End Col -->
-          <div class="col-3">
-              <h2 class="js-cd-minutes h1 text-primary mb-0"></h2>
-              <h5 class="mb-0">Minutos</h5>
-          </div>
-          <!-- End Col -->
-          <div class="col-3">
-              <h2 class="js-cd-seconds h1 text-primary mb-0"></h2>
-              <h5 class="mb-0">Segundos</h5>
-          </div>
-          <!-- End Col -->
-          </div>
-          <!-- End Row -->
-          <p class="lead mt-3">13 de septiembre de 2025</p>
-      </div>
-  </div>
-    <!-- End Hero -->
 
+    <!-- Hero -->
+    <div id="hero-section"></div>
+    <!-- End Hero -->
     <!-- Mapa -->
     <div class="container content-space-1 content-space-lg-3">
 
@@ -86,13 +61,7 @@
       <!-- End Heading -->
 
       <!-- Mapa del pazo -->
-      <div class="ratio ratio-16x9  mb-5">
-        <iframe class="rounded"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2239.401658396633!2d-8.559226153667096!3d42.877973048865286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2efe697f7d8de7%3A0x114f9b52ff93c6de!2sPazo%20de%20San%20Lorenzo%20de%20Trasouto!5e1!3m2!1ses!2ses!4v1733578276226!5m2!1ses!2ses"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
+      <div id="mapa">
       </div>
       <!-- End Mapa del pazo -->
     </div>
@@ -174,217 +143,41 @@
       </div>
     </div>
     <!-- End Día de la boda -->
+    <!-- Hero -->
+    <div class="hero">
+      <div class="hero-content rounded-3 bg-white bg-opacity-75 p-5 text-center">
+          <!-- <h1 class="display-4">Boda de Bea y Pablo</h1> -->
+          <div class="js-countdown row">
+          <div class="col-3">
+              <h2 class="js-cd-days h1 text-primary mb-0"></h2>
+              <h5 class="mb-0">Días</h5>
+          </div>
+          <!-- End Col -->
+          <div class="col-3">
+              <h2 class="js-cd-hours h1 text-primary mb-0"></h2>
+              <h5 class="mb-0">Horas</h5>
+          </div>
+          <!-- End Col -->
+          <div class="col-3">
+              <h2 class="js-cd-minutes h1 text-primary mb-0"></h2>
+              <h5 class="mb-0">Minutos</h5>
+          </div>
+          <!-- End Col -->
+          <div class="col-3">
+              <h2 class="js-cd-seconds h1 text-primary mb-0"></h2>
+              <h5 class="mb-0">Segundos</h5>
+          </div>
+          <!-- End Col -->
+          </div>
+          <!-- End Row -->
+          <p class="lead mt-3">13 de septiembre de 2025</p>
+      </div>
+  </div>
+    <!-- End Hero -->
 
     <!-- Lista de novios -->
       <!-- Card Grid -->
-      <div class="overflow-hidden">
-        <div class="container content-space-1 content-space-b-lg-3">
-          <!-- Heading -->
-          <div class="w-lg-65 text-center mx-lg-auto mb-5 mb-sm-7 mb-lg-10">
-            <h1>Participa en nuestra historia</h1>
-            <p>Para nosotros lo más importante es tú compañía en nuestro día más especial. Si de todas formas quieres formar parte del inicio de nuestra aventura, estas son algunas experiencias y colaboraciones en las que nos puedes ayudar.</p>
-          </div>
-          <!-- End Heading -->
-
-          <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 gx-7">
-            <div class="col mb-7 mb-md-10">
-              <!-- Card -->
-            <!-- <a class="card card-ghost card-transition-zoom h-100" href="#" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto" data-bs-content="Prueba"> -->
-              <a class="card card-ghost card-transition-zoom h-100" data-bs-toggle="collapse" href="#Inmersion" role="button">
-              <div class="card-pinned card-transition-zoom-item">
-                <img class="card-img" src="/galeria/regalos/tiburon-blanco.png" alt="Image Description">
-              </div>
-              <div class="card-body">
-                <h4>Inmersión con tiburón blanco</h4>
-                <p class="card-text">Todos los que conocéis a Bea sabeis la ilusión que le haría poder ver un tiburón de cerca. En nuestra luna de miel, queremos hacer una inmersión con tiburones blanco para que por fin pueda ver uno de cerca.</p>
-              </div>
-
-              <div class="collapse" id="Inmersion">
-                <div class="alert alert-soft-primary" role="alert">
-                  <b>Participa a través del siguiente IBAN:</b> ES8515830001129192861889
-                  <br>
-                  <b>Código BIC/SWIFT:</b> REVOESM2
-                  <br>
-                  <b>Concepto:</b> Inmersión con tiburón blanco
-                </div>
-              </div>
-
-              <div class="progress">
-                <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-
-              <div class="card-footer">
-                <span class="card-link">Participa</span>
-              </div>
-            </a>
-              <!-- End Card -->
-            </div>
-            <!-- End Col -->
-
-            <div class="col mb-7 mb-md-10">
-              <!-- Card -->
-              <a class="card card-ghost card-transition-zoom h-100" href="./blog-article.html">
-                <div class="card-transition-zoom-item">
-                  <img class="card-img" src="/assets/img/580x480/img15.jpg" alt="Image Description">
-                </div>
-
-                <div class="card-body">
-                  <h4>Onsite</h4>
-                  <p class="card-text">Optimize your in-person experience with best-in-class capabilities like badge printing and lead retrieval</p>
-                </div>
-
-                <div class="card-footer">
-                  <span class="card-link">Read more</span>
-                </div>
-              </a>
-              <!-- End Card -->
-            </div>
-            <!-- End Col -->
-
-            <div class="col mb-7 mb-md-10">
-              <!-- Card -->
-              <a class="card card-borderless card-transition h-100 bg-img-end" href="./blog-article.html" style="background-image: url(/assets/svg/components/card-12.svg); min-height: 15rem;">
-                <div class="card-body">
-                  <div class="d-flex justify-content-between flex-column h-100">
-                    <div class="mb-1">
-                      <span class="card-title fs-3 text-white"><span class="fw-bold">Unify</span> Press publishes books about economic and technological advancement.</span>
-                    </div>
-                    <div class="mt-1">
-                      <span class="card-link link-light">Visit the site</span>
-                    </div>
-                  </div>
-                </div>
-              </a>
-              <!-- End Card -->
-            </div>
-            <!-- End Col -->
-
-            <div class="col mb-7 mb-md-10">
-              <!-- Card -->
-              <a class="card card-ghost card-transition-zoom h-100" href="./blog-article.html">
-                <div class="card-transition-zoom-item">
-                  <img class="card-img" src="/assets/img/580x480/img7.jpg" alt="Image Description">
-                </div>
-
-                <div class="card-body">
-                  <h4>The complete guide to OKRs</h4>
-                  <p class="card-text">How to make objectives and key results work for your company</p>
-                </div>
-
-                <div class="card-footer">
-                  <span class="card-link">Read more</span>
-                </div>
-              </a>
-              <!-- End Card -->
-            </div>
-            <!-- End Col -->
-
-            <div class="col mb-7 mb-md-10">
-              <!-- Card -->
-              <a class="card card-ghost card-transition-zoom h-100" href="./blog-article.html">
-                <div class="card-pinned card-transition-zoom-item">
-                  <img class="card-img" src="/assets/img/580x480/img8.jpg" alt="Image Description">
-                  <span class="badge bg-dark text-white card-pinned-top-end">Sponsored</span>
-                </div>
-
-                <div class="card-body">
-                  <h4>People program models</h4>
-                  <p class="card-text">Six approaches to bringing your People strategy to life</p>
-                </div>
-
-                <div class="card-footer">
-                  <span class="card-link">Read more</span>
-                </div>
-              </a>
-              <!-- End Card -->
-            </div>
-            <!-- End Col -->
-
-            <div class="col mb-7 mb-md-10">
-              <!-- Card -->
-              <a class="card card-ghost card-transition-zoom h-100" href="./blog-article.html">
-                <div class="card-transition-zoom-item">
-                  <img class="card-img" src="/assets/img/580x480/img9.jpg" alt="Image Description">
-                </div>
-
-                <div class="card-body">
-                  <h4>HR calendar 2021</h4>
-                  <p class="card-text">Workplace holidays, important deadlines, and monthly People strategy advice.</p>
-                </div>
-
-                <div class="card-footer">
-                  <span class="card-link">Read more</span>
-                </div>
-              </a>
-              <!-- End Card -->
-            </div>
-            <!-- End Col -->
-
-            <div class="col mb-7 mb-md-10">
-              <!-- Card -->
-              <a class="card card-ghost card-transition-zoom h-100" href="./blog-article.html">
-                <div class="card-transition-zoom-item">
-                  <img class="card-img" src="/assets/img/580x480/img18.jpg" alt="Image Description">
-                </div>
-
-                <div class="card-body">
-                  <h4>The ultimate guide to employee development</h4>
-                  <p class="card-text">How to use job levels, competencies, and growth plans to make career advancement crystal clear.</p>
-                </div>
-
-                <div class="card-footer">
-                  <span class="card-link">Read more</span>
-                </div>
-              </a>
-              <!-- End Card -->
-            </div>
-            <!-- End Col -->
-
-            <div class="col mb-7 mb-md-10">
-              <!-- Card -->
-              <a class="card card-ghost card-transition-zoom h-100" href="./blog-article.html">
-                <div class="card-pinned card-transition-zoom-item">
-                  <img class="card-img" src="/assets/img/580x480/img17.jpg" alt="Image Description">
-                  <span class="badge bg-dark text-white card-pinned-top-end">Sponsored</span>
-                </div>
-
-                <div class="card-body">
-                  <h4>The ultimate guide to employee engagement surveys</h4>
-                  <p class="card-text">A how-to guide for running and acting on your next employee engagement survey.</p>
-                </div>
-
-                <div class="card-footer">
-                  <span class="card-link">Read more</span>
-                </div>
-              </a>
-              <!-- End Card -->
-            </div>
-            <!-- End Col -->
-
-            <div class="col mb-7 mb-md-10">
-              <!-- Card -->
-              <a class="card card-ghost card-transition-zoom h-100" href="./blog-article.html">
-                <div class="card-transition-zoom-item">
-                  <img class="card-img" src="/assets/img/580x480/img16.jpg" alt="Image Description">
-                </div>
-
-                <div class="card-body">
-                  <h4>The evolution of performance management</h4>
-                  <p class="card-text">The story of how we ended up with performance reviews</p>
-                </div>
-
-                <div class="card-footer">
-                  <span class="card-link">Read more</span>
-                </div>
-              </a>
-              <!-- End Card -->
-            </div>
-            <!-- End Col -->
-          </div>
-          <!-- End Row -->
-
-        </div>
-      </div>
+      <div id="lista-novios"></div>
       <!-- End Card Grid -->
 
     <!-- End Lista de novios -->
