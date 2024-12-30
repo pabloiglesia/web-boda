@@ -8,6 +8,7 @@ async function updateProgressBar(id_progress_bar) {
     Papa.parse(csvData, {
         header: true,
         skipEmptyLines: true,
+        delimiter: ";", // Cambiar el delimitador a punto y coma
         complete: function (results) {
             const data = results.data;
 
@@ -35,7 +36,7 @@ async function updateProgressBar(id_progress_bar) {
         error: function (error) {
             alert("Error parsing CSV file: " + error.message);
         }
-        });
+    });
 }
 
 async function cargarRegalos() {
@@ -48,6 +49,7 @@ async function cargarRegalos() {
     Papa.parse(csvData, {
         header: true,
         skipEmptyLines: true,
+        delimiter: ";", // Cambiar el delimitador a punto y coma
         complete: function (results) {
             const data = results.data;
 
@@ -62,7 +64,7 @@ async function cargarRegalos() {
                     <!-- Col -->
                     <div class="col mb-7 mb-md-10">
                         <!-- Card -->
-                        <a class="card card-ghost card-transition-zoom h-100" data-bs-toggle="collapse" href="#InmersionTiburonesIBAN" role="button">
+                        <a class="card card-ghost card-transition-zoom h-100" data-bs-toggle="collapse" href="#${row.Regalo}IBAN" role="button">
                             <!-- Foto -->
                             <div class="card-pinned card-transition-zoom-item">
                                 <img class="card-img" src="${row.imagen}" alt="Image Description">
@@ -84,7 +86,7 @@ async function cargarRegalos() {
                             </div>
                             <!-- Barra de progreso -->
                             <div class="progress">
-                                <div id="${row.Regalo}" class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: ${row.Recaudado / row.Coste_Total}"></div>
+                                <div id="${row.Regalo}" class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: ${(row.Recaudado / row.Coste_Total) * 100}%"></div>
                             </div>
                             <!-- Participa -->
                             <div class="card-footer">
@@ -100,6 +102,6 @@ async function cargarRegalos() {
         error: function (error) {
             alert("Error parsing CSV file: " + error.message);
         }
-        });
+    });
 }
 
