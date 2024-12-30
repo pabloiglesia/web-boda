@@ -24,6 +24,7 @@ async function updateProgressBar(id_progress_bar) {
 
                 if (!isNaN(pctRecaudado)) {
                     progressBar.style.width = `${pctRecaudado}%`;
+                    progressBar.textContent = `${pctRecaudado}%`;
                 } else {
                     alert("Pct_Recaudado is not a valid number.");
                 }
