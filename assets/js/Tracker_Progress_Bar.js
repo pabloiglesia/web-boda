@@ -1,44 +1,3 @@
-async function updateProgressBar(id_progress_bar) {
-
-    const filePath = '/assets/Tracker_Regalos - Totales.csv';
-    const response = await fetch(filePath);
-    const csvData = await response.text();
-
-    // Parse CSV data
-    Papa.parse(csvData, {
-        header: true,
-        skipEmptyLines: true,
-        delimiter: ";", // Cambiar el delimitador a punto y coma
-        complete: function (results) {
-            const data = results.data;
-
-            data.forEach(row => {
-                console.log(row); // Imprime la fila en la consola
-            });
-
-            // Find the record with the matching id
-            const record = data.find(row => row.Regalo === id_progress_bar);
-
-            if (record && record.Pct_Recaudado) {
-                const pctRecaudado = parseFloat(record.Pct_Recaudado);
-                const progressBar = document.getElementById(id_progress_bar);
-
-                if (!isNaN(pctRecaudado)) {
-                    progressBar.style.width = `${pctRecaudado}%`;
-                    progressBar.textContent = `${pctRecaudado}%`;
-                } else {
-                    alert("Pct_Recaudado is not a valid number.");
-                }
-            } else {
-                alert("ID not found or missing data.");
-            }
-        },
-        error: function (error) {
-            alert("Error parsing CSV file: " + error.message);
-        }
-    });
-}
-
 async function cargarRegalos() {
 
     const filePath = '/assets/Tracker_Regalos - Totales.csv';
@@ -85,8 +44,8 @@ async function cargarRegalos() {
                                 </div>
                             </div>
                             <!-- Barra de progreso -->
-                            <div class="progress">
-                                <div id="${row.Regalo}" class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: ${(row.Recaudado / row.Coste_Total) * 100}%"></div>
+                            <div class="progress" style="height: 15px;">
+                                <div id="${row.Regalo}" class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: ${(row.Recaudado / row.Coste_Total) * 100}%">${Math.min(100,Math.round((row.Recaudado / row.Coste_Total) * 100))}%</div>
                             </div>
                             <!-- Participa -->
                             <div class="card-footer">
