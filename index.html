@@ -30,7 +30,8 @@
       $("#mapa").load("/template/mapa.html");
       $("#lista-novios").load("/template/regalos.html");
       $("#hero-section").load("/template/hero-section.html");
-    });
+      $("#time-left").load("/template/time-left.html");
+      $("#dia-boda").load("/template/dia-boda.html")});
   </script>
 </head>
 
@@ -50,136 +51,23 @@
     <!-- Hero -->
     <div id="hero-section"></div>
     <!-- End Hero -->
-    <!-- Mapa -->
-    <div class="container content-space-1 content-space-lg-3">
 
-      <!-- Heading -->
-      <div class="w-lg-65 text-center mx-lg-auto">
-        <h2>Lugar de celebración</h2>
-        <p>La misa y posterior celebración se van a llevar acabo en el Pazo de San Lorenzo en Santiago de Compostela. El pazo no dispone de parking y dada la céntrica ubicación de pazo no va a haber servicios de autobuses. Recomendamos acudir al pazo con tiempo y caminando o en taxi dependiendo de la cercanía del alojamiento.</p>
-      </div>
-      <!-- End Heading -->
+    <!-- Countdown -->
+    <div id="time-left"></div>
+    <!-- Countdown -->
 
-      <!-- Mapa del pazo -->
-      <div id="mapa">
-      </div>
-      <!-- End Mapa del pazo -->
-    </div>
+    <!-- Mapa del pazo -->
+    <div id="mapa"></div>
+    <!-- End Mapa del pazo -->
 
       <!-- Día de la boda -->
-    <div class="">
-      <div class="container content-space-1 content-space-lg-3">
-        <div class="w-lg-65 text-center mx-lg-auto">
-          <h2>Detalles del día</h2>
-          <p>A continuación, se detalla el horario de la celebración y el orden de los diferentes momentos que vamos a vivir.</p>
-        </div>
-
-        <div class="w-lg-75 mx-lg-auto">
-          <!-- List Timeline -->
-          <ul class="list-unstyled list-timeline list-py-3">
-            <!-- Card Iglesia -->
-            <li class="list-timeline-item">
-              <a class="card card-sm card-transition-zoom" href="#">
-                <div class="card-transition-zoom-item">
-                  <img class="card-img" src="/galeria/dia-boda/iglesia-2.jpeg" alt="Image Description">
-                </div>
-                <div class="card-img-overlay top-auto">
-                  <div class="d-flex justify-content-end flex-column bg-white rounded-3 p-4">
-                    <h4 class="card-title"><span class="fs-2 text-primary">01.</span> Ceremonia religiosa</h4>
-                    <p class="card-text">La misa dará comienzo a las 13:00 en la capilla que se encuentra en el interior del pazo.</p>
-                  </div>
-                </div>
-              </a>
-            </li>
-            <!-- End Card Iglesia -->
-            <!-- Card Aperitivo -->
-            <li class="list-timeline-item ms-auto">
-              <a class="card card-sm card-transition-zoom" href="#">
-                <div class="card-transition-zoom-item">
-                  <img class="card-img" src="/galeria/dia-boda/boj.jpg" alt="Image Description">
-                </div>
-                <div class="card-img-overlay top-auto">
-                  <div class="d-flex justify-content-end flex-column bg-white rounded-3 p-4">
-                    <h4 class="card-title"><span class="fs-2 text-primary">02.</span> Aperitivo en los jardines o salón interior</h4>
-                    <p class="card-text">Al terminar la misa, el personal del pazo os guiará a los jardines o a uno de los salones interiores, en función de la climatología, para poder reencontraros con nosotros tras la misa y comenzar la celebración.</p>
-                  </div>
-                </div>
-              </a>
-            </li>
-            <!-- End Card Aperitivo -->
-            <!-- Card Banquete -->
-            <li class="list-timeline-item">
-              <a class="card card-sm card-transition-zoom" href="#">
-                <div class="card-transition-zoom-item">
-                  <img class="card-img" src="/galeria/dia-boda/mesas-claustro.jpeg" alt="Image Description">
-                </div>
-                <div class="card-img-overlay top-auto">
-                  <div class="d-flex justify-content-end flex-column bg-white rounded-3 p-4">
-                    <h4 class="card-title"><span class="fs-2 text-primary">03.</span> Comida en el claustro</h4>
-                    <p class="card-text">Tras el aperitivo nos dirigiremos al claustro del pazo para disfrutar de la comida.</p>
-                  </div>
-                </div>
-              </a>
-            </li>
-            <!-- End Card Banquete -->
-            <!-- Card Fiesta -->
-            <li class="list-timeline-item ms-auto">
-              <a class="card card-sm card-transition-zoom" href="#">
-                <div class="card-transition-zoom-item">
-                  <img class="card-img" src="/galeria/dia-boda/fiesta-2.jpg" alt="Image Description">
-                </div>
-                <div class="card-img-overlay top-auto">
-                  <div class="d-flex justify-content-end flex-column bg-white rounded-3 p-4">
-                    <h4 class="card-title"><span class="fs-2 text-primary">04.</span> Fiesta</h4>
-                    <p class="card-text">Esperamos que hayáis cogido energía en la comida porque os queremos dándolo todo en la pista de baile.</p>
-                  </div>
-                </div>
-              </a>
-            </li>
-            <!-- End Card Fiesta -->
-          </ul>
-          <!-- End List Timeline -->
-        </div>
-      </div>
-    </div>
+    <div id="dia-boda"></div>
     <!-- End Día de la boda -->
-    <!-- Hero -->
-    <div class="hero">
-      <div class="hero-content rounded-3 bg-white bg-opacity-75 p-5 text-center">
-          <!-- <h1 class="display-4">Boda de Bea y Pablo</h1> -->
-          <div class="js-countdown row">
-          <div class="col-3">
-              <h2 class="js-cd-days h1 text-primary mb-0"></h2>
-              <h5 class="mb-0">Días</h5>
-          </div>
-          <!-- End Col -->
-          <div class="col-3">
-              <h2 class="js-cd-hours h1 text-primary mb-0"></h2>
-              <h5 class="mb-0">Horas</h5>
-          </div>
-          <!-- End Col -->
-          <div class="col-3">
-              <h2 class="js-cd-minutes h1 text-primary mb-0"></h2>
-              <h5 class="mb-0">Minutos</h5>
-          </div>
-          <!-- End Col -->
-          <div class="col-3">
-              <h2 class="js-cd-seconds h1 text-primary mb-0"></h2>
-              <h5 class="mb-0">Segundos</h5>
-          </div>
-          <!-- End Col -->
-          </div>
-          <!-- End Row -->
-          <p class="lead mt-3">13 de septiembre de 2025</p>
-      </div>
-  </div>
-    <!-- End Hero -->
+
+
 
     <!-- Lista de novios -->
-      <!-- Card Grid -->
       <div id="lista-novios"></div>
-      <!-- End Card Grid -->
-
     <!-- End Lista de novios -->
 
   </main>
@@ -225,31 +113,6 @@
   <!-- JS Countdown -->
  <script src="/assets/vendor/countdown/countdown.js"></script>
 
-  <script>
-    (function() {
-      // INITIALIZATION OF COUNTDOWN
-      // =======================================================
-      const oneYearFromNow = new Date()
-
-      document.querySelectorAll('.js-countdown').forEach(item => {
-        const days = item.querySelector('.js-cd-days'),
-          hours = item.querySelector('.js-cd-hours'),
-          minutes = item.querySelector('.js-cd-minutes'),
-          seconds = item.querySelector('.js-cd-seconds')
-
-        countdown(new Date(2025, 8, 13, 13, 0),
-          ts => {
-            days.innerHTML = ts.days
-            hours.innerHTML = ts.hours
-            minutes.innerHTML = ts.minutes
-            seconds.innerHTML = ts.seconds
-          },
-          countdown.DAYS | countdown.HOURS | countdown.MINUTES | countdown.SECONDS
-        )
-      })
-    })()
-  </script>
-
   <!-- JS Plugins Init. -->
   <script>
     (function() {
@@ -270,27 +133,6 @@
       // INITIALIZATION OF GO TO
       // =======================================================
       new HSGoTo('.js-go-to')
-
-
-      // INITIALIZATION OF SWIPER
-      // =======================================================
-      var swiper = new Swiper('.js-swiper-clients',{
-        slidesPerView: 2,
-        breakpoints: {
-          380: {
-            slidesPerView: 3,
-            spaceBetween: 15,
-          },
-          768: {
-            slidesPerView: 4,
-            spaceBetween: 15,
-          },
-          1024: {
-            slidesPerView: 5,
-            spaceBetween: 15,
-          },
-        },
-      });
     })()
   </script>
 </body>

@@ -1,8 +1,15 @@
-Regalo;Coste_Total;Recaudado;imagen;titulo;descripcion;concepto
-Sudafrica;300;450;/galeria/regalos/capetown.jpg;Viaje a Sudáfrica;Explorar la belleza de Sudáfrica, desde sus playas hasta sus montañas. Queremos disfrutar de la cultura y la naturaleza de este hermoso país.;Viaje a Sudáfrica
-InmersionTiburones;150;50;/galeria/regalos/tiburon-blanco.png;Inmnersión con tiburón blanco;Todos los que conocéis a Bea sabeis la ilusión que le haría poder ver un tiburón de cerca. En nuestra luna de miel, queremos hacer una inmersión con tiburones blanco para que por fin pueda ver uno de cerca.;Inmnersión con tiburón blanco
-Safari;2000;500;/galeria/regalos/safari/4.jpg;Safari en África;Una aventura inolvidable en un safari por África para ver animales salvajes en su hábitat natural. Queremos capturar estos momentos únicos en fotos.;Safari en África
-Mauricio;500;250.53;/galeria/regalos/mauricio1.jpg;Vacaciones en Mauricio;Disfrutar de unas vacaciones paradisíacas en las playas de Mauricio. Queremos relajarnos y disfrutar del sol y el mar en este hermoso lugar.;Vacaciones en Mauricio
-Vajilla;200;198;/galeria/regalos/vajilla1.jpg;Vajilla nueva;Una vajilla elegante para nuestras cenas especiales. Queremos tener una vajilla que sea tanto funcional como hermosa para nuestras reuniones.;Vajilla nueva
-CadenaMusica;150;80;/galeria/regalos/cadena1.jpg;Cadena de música;Un sistema de sonido de alta calidad para disfrutar de nuestra música favorita. Queremos llenar nuestra casa con música y buenos momentos.;Cadena de música
-ONG;600;300;/galeria/regalos/ong1.jpg;Donación a ONG;Contribuir a una causa benéfica a través de una donación a una ONG. Queremos apoyar a quienes más lo necesitan y hacer una diferencia en sus vidas.;Donación a ONG
+Nombre;Estrellas;Web;Distancia;Codigo descuento;Descuento;Condiciones;Anotaciones
+Hotel Palacio del Carmen;5;https://www.marriott.com/es/hotels/scqak-hotel-palacio-del-carmen-autograph-collection/overview/;700 m 9 minutos;;;;
+Hotel Exe Peregrino;4;https://www.eurostarshotels.com/exe-peregrino/disponibilidad.html?utm_campaign=googlehpa_es&id_hotel=SYN2183&start=2025-09-12&utm_medium=cpc&promotion_code=BODABYP&guests[0][adults]=2&id_referer=GOOGLEHPA_ES&utm_source=googlehpa&city_id=100159&td=m00ga01&end=2025-09-14&avail_code=GOOGLEHPA_ES&referer_code=GOOGLEHPA_ES#monoHotelAvail/EUR;1,1 km 16 minutos;BODABYP;15% de descuento para las fechas 12 y 13 de septiembre;Aplicable hasta el 13 de agosto;
+Eurostars Gran Hotel Santiago;4;https://www.eurostarshotels.com/eurostars-gran-hotel-santiago/disponibilidad.html?utm_campaign=googlehpa_es&id_hotel=H233&start=2025-09-12&utm_medium=cpc&promotion_code=BODABYP&guests[0][adults]=2&id_referer=GOOGLEHPA_ES&utm_source=googlehpa&city_id=100159&td=m00ga01&end=2025-09-14&avail_code=GOOGLEHPA_ES&referer_code=GOOGLEHPA_ES#monoHotelAvail/EUR;750 m 11 minutos;BODABYP;;;
+Lux Apartamentos Santiago;3;https://www.gescahoteles.com/lux-apartamentos-santiago/;900m 13 minutos;;;;
+Hotel San Lorenzo;3;https://www.hsanlorenzo.com/es/;500m 7 minutos;;;;Sin disponibilidad
+Hotel Herradura;3;https://www.hotelherradura.es/#;900 m 14 minutos;dar como referencia nuestros nombres “Boda Bea y Pablo - 13 septiembre 2025”;;;"Las tarifas que se aplican son las siguientes:
+Habitación doble: 120€
+Habitación individual: 89€
+Cama supletoria 33€
+Con desayuno e IVA incluido"
+Alameda Rooms;2;https://www.gescahoteles.com/alameda-rooms-santiago/;1,1 km 16 minutos;;;;
+Pombal Rooms Santiago;2;https://www.gescahoteles.com/pombal-rooms/;750 m 11 minutos ;;;;
+Hotel Pazos Alba;2;https://hotelpazosalba.com;850m 12 minutos;;;;
+Lux Apartamentos Rosalía;Apartamentos;https://www.gescahoteles.com/lux-apartamentos-rosalia/;900 m 13 minutos;;;;Apartamentos de 2 habitaciones y sofá cama.

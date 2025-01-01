@@ -26,6 +26,8 @@
     $(function(){
       $("#header").load("/template/header.html");
       $("#footer").load("/template/footer.html");
+      $("#mapa").load("/template/mapa.html");
+      $("#dia-boda").load("/template/dia-boda.html");
     });
   </script>
 
@@ -55,100 +57,8 @@
     <!-- End Hero -->
 
 
-    <!-- Step Features -->
-    <div class="container content-space-1 content-space-lg-3">
-
-      <!-- Heading -->
-      <div class="w-lg-65 text-center mx-lg-auto mb-5 mb-sm-7 mb-lg-10">
-        <h2>Lugar de celebración</h2>
-        <p>La misa y posterior celebración se van a llevar acabo en el Pazo de San Lorenzo en Santiago de Compostela. El pazo no dispone de parking y dada la céntrica ubicación de pazo no va a haber servicios de autobuses. Recomendamos acudir al pazo con tiempo y caminando o en taxi dependiendo de la cercanía del alojamiento.</p>
-      </div>
-      <!-- End Heading -->
-
-      <!-- Mapa del pazo -->
-      <div class="ratio ratio-16x9  mb-5">
-        <iframe class="rounded"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2239.401658396633!2d-8.559226153667096!3d42.877973048865286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2efe697f7d8de7%3A0x114f9b52ff93c6de!2sPazo%20de%20San%20Lorenzo%20de%20Trasouto!5e1!3m2!1ses!2ses!4v1733578276226!5m2!1ses!2ses"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
-      </div>
-      <!-- End Mapa del pazo -->
-
-      <!-- Heading -->
-      <div class="w-lg-65 text-center mx-lg-auto mb-5 mb-sm-7 mb-lg-10">
-        <h2>Detalles del día</h2>
-        <p>A continuación, se detalla el horario de la celebración y el orden de los diferentes momentos que vamos a vivir.</p>
-      </div>
-      <!-- End Heading -->
-
-      <div class="w-lg-75 mx-lg-auto">
-        <!-- List Timeline -->
-        <ul class="list-unstyled list-timeline list-py-3">
-          <!-- Card Iglesia -->
-          <li class="list-timeline-item">
-            <a class="card card-sm card-transition-zoom" href="#">
-              <div class="card-transition-zoom-item">
-                <img class="card-img" src="/galeria/dia-boda/iglesia-2.jpeg" alt="Image Description">
-              </div>
-              <div class="card-img-overlay top-auto">
-                <div class="d-flex justify-content-end flex-column bg-white rounded-3 p-4">
-                  <h4 class="card-title"><span class="fs-2 text-primary">01.</span> Ceremonia religiosa</h4>
-                  <p class="card-text">La misa dará comienzo a las 13:00 en la capilla que se encuentra en el interior del pazo.</p>
-                </div>
-              </div>
-            </a>
-          </li>
-          <!-- End Card Iglesia -->
-          <!-- Card Aperitivo -->
-          <li class="list-timeline-item ms-auto">
-            <a class="card card-sm card-transition-zoom" href="#">
-              <div class="card-transition-zoom-item">
-                <img class="card-img" src="/galeria/dia-boda/boj.jpg" alt="Image Description">
-              </div>
-              <div class="card-img-overlay top-auto">
-                <div class="d-flex justify-content-end flex-column bg-white rounded-3 p-4">
-                  <h4 class="card-title"><span class="fs-2 text-primary">02.</span> Aperitivo en los jardines o salón interior</h4>
-                  <p class="card-text">Al terminar la misa, el personal del pazo os guiará a los jardines o a uno de los salones interiores, en función de la climatología, para poder reencontraros con nosotros tras la misa y comenzar la celebración.</p>
-                </div>
-              </div>
-            </a>
-          </li>
-          <!-- End Card Aperitivo -->
-          <!-- Card Banquete -->
-          <li class="list-timeline-item">
-            <a class="card card-sm card-transition-zoom" href="#">
-              <div class="card-transition-zoom-item">
-                <img class="card-img" src="/galeria/dia-boda/mesas-claustro.jpeg" alt="Image Description">
-              </div>
-              <div class="card-img-overlay top-auto">
-                <div class="d-flex justify-content-end flex-column bg-white rounded-3 p-4">
-                  <h4 class="card-title"><span class="fs-2 text-primary">03.</span> Comida en el claustro</h4>
-                  <p class="card-text">Tras el aperitivo nos dirigiremos al claustro del pazo para disfrutar de la comida.</p>
-                </div>
-              </div>
-            </a>
-          </li>
-          <!-- End Card Banquete -->
-          <!-- Card Fiesta -->
-          <li class="list-timeline-item ms-auto">
-            <a class="card card-sm card-transition-zoom" href="#">
-              <div class="card-transition-zoom-item">
-                <img class="card-img" src="/galeria/dia-boda/fiesta-2.jpg" alt="Image Description">
-              </div>
-              <div class="card-img-overlay top-auto">
-                <div class="d-flex justify-content-end flex-column bg-white rounded-3 p-4">
-                  <h4 class="card-title"><span class="fs-2 text-primary">04.</span> Fiesta</h4>
-                  <p class="card-text">Esperamos que hayáis cogido energía en la comida porque os queremos dándolo todo en la pista de baile.</p>
-                </div>
-              </div>
-            </a>
-          </li>
-          <!-- End Card Fiesta -->
-        </ul>
-        <!-- End List Timeline -->
-      </div>
+    <div id="mapa"></div>
+    <div id="dia-boda"></div>
     </div>
     <!-- End Step Features -->
 
