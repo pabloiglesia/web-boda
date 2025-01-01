@@ -27,6 +27,7 @@
     $(function(){
       $("#header").load("/template/header.html");
       $("#footer").load("/template/footer.html");
+      $("#hoteles-template").load("/template/hoteles.html");
     });
   </script>
 
@@ -43,73 +44,13 @@
 
   <!-- ========== MAIN CONTENT ========== -->
   <main id="content" role="main">
-    <!-- Hero -->
-    <div class="overflow-hidden">
-      <div class="container content-space-t-3 content-space-t-lg-4">
-        <div class="w-lg-65 text-center mx-lg-auto mb-5 mb-sm-7 mb-lg-10">
-          <h2>Hoteles y apartamentos</h2>
-          <p>Para facilitar la búsqueda de alojamiento, os compartimos una selección de hoteles que quedan cerca del pazo. Además, con algunos de ellos hemos conseguido un descuento específico para el fin de semana de la boda.</p>
-        </div>
-      </div>
-    </div>
-    <!-- End Hero -->
-
-    <!-- Card Grid -->
-    <div class="overflow-hidden">
-      <div class="container content-space-1 content-space-lg-3">
-        <div class="row justify-content-lg-between">
-          <div class="col-md-7">
-            <!-- Swiper Slider -->
-            <div class="swiper-center-mode-end">
-              <div class="js-swiper-card-grid swiper swiper-equal-height ps-4">
-                <div class="swiper-wrapper">
-                  <!-- Slide -->
-                  <div class="swiper-slide pt-4 pb-8">
-                    <!-- Card -->
-                    <a class="card card-transition" href="#">
-                      <div class="card-pinned">
-                        <img class="card-img-top" src="/assets/svg/components/card-3.svg" alt="Image Description">
-                        <span class="badge bg-dark text-white card-pinned-top-end"><i class="bi-house"></i></span>
-                      </div>
-                      <div class="card-body">
-                        <h5 class="card-title">Explore the Snippets tool</h5>
-                        <p>Answer a few simple questions to get your policy. Talk to an agent if you need help.</p>
-                      </div>
-                      <div class="card-footer pt-0">
-                        <span class="card-link">Read more</span>
-                      </div>
-                    </a>
-                    <!-- End Card -->
-                  </div>
-                  <!-- End Slide -->
-
-                <!-- Arrows -->
-                <div class="js-swiper-card-grid-button-prev swiper-button-prev swiper-static-button-prev"></div>
-                <div class="js-swiper-card-grid-button-next swiper-button-next swiper-static-button-next"></div>
-
-                <!-- Preloader -->
-                <div class="js-swiper-preloader swiper-preloader">
-                  <div class="spinner-border text-primary" role="status">
-                    <span class="visually-hidden">Loading...</span>
-                  </div>
-                </div>
-                <!-- End Preloader -->
-              </div>
-            </div>
-            <!-- End Swiper Slider -->
-          </div>
-          <!-- End Col -->
-        </div>
-        <!-- End Row -->
-      </div>
-    </div>
-    <!-- End Card Grid -->
+    <div id="hoteles-template"></div>
   </main>
   <!-- ========== END MAIN CONTENT ========== -->
 
   <!-- ========== FOOTER ========== -->
-<footer id="footer" class="bg-dark"></footer>
-<!-- ========== END FOOTER ========== -->
+  <footer class="bg-dark" id="footer"></footer>
+  <!-- ========== END FOOTER ========== -->
 
   <!-- ========== SECONDARY CONTENTS ========== -->
   <!-- Go To -->

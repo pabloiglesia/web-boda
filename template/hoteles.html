@@ -1,0 +1,61 @@
+<script src="https://cdn.jsdelivr.net/npm/papaparse/papaparse.min.js"></script>
+<script src="/assets/js/procesar_csvs.js"></script>
+<script>
+  $(document).ready(function() {
+    cargarHoteles().then(() => {
+      var swiper = new Swiper('.js-swiper-card-grid', {
+        navigation: {
+          nextEl: '.js-swiper-card-grid-button-next',
+          prevEl: '.js-swiper-card-grid-button-prev',
+        },
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: 1,
+        breakpoints: {
+          480: {
+            slidesPerView: 2
+          },
+          768: {
+            slidesPerView: 2
+          },
+          1024: {
+            slidesPerView: 3
+          },
+        }
+      });
+    });
+  });
+</script>
+
+<!-- Hero -->
+<div class="overflow-hidden">
+  <div class="container content-space-1">
+    <div class="w-lg-65 text-center mx-lg-auto">
+      <h2 class="text-white">Hoteles y apartamentos</h2>
+      <p class="text-white">Para facilitar la búsqueda de alojamiento, os compartimos una selección de hoteles que quedan cerca del pazo. Además, con algunos de ellos hemos conseguido un descuento específico para el fin de semana de la boda.</p>
+    </div>
+  </div>
+</div>
+<!-- End Hero -->
+
+<!-- Card Grid -->
+<div class="container">
+  <div class="row justify-content-lg-between">
+    <div class="col-md-7">
+      <!-- Swiper Slider -->
+      <div class="swiper-center-mode-end text-center mb-3">
+        <div class="js-swiper-card-grid swiper swiper-equal-height ps-4">
+          <div class="swiper-wrapper" id="hoteles"></div>
+
+          <!-- Arrows -->
+          <div class="js-swiper-card-grid-button-prev swiper-button-prev swiper-static-button-prev"></div>
+          <div class="js-swiper-card-grid-button-next swiper-button-next swiper-static-button-next"></div>
+        </div>
+      </div>
+      <!-- End Swiper Slider -->
+    </div>
+    <!-- End Col -->
+  </div>
+  <!-- End Row -->
+</div>
+<!-- End Card Grid -->
