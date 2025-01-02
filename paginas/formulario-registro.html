@@ -20,17 +20,18 @@
             const name = document.getElementById('name').value;
 
             // Endpoint URL (replace with your actual URL)
-            const url = 'https://script.google.com/macros/s/AKfycbzihxNPuKdsoNWXfllTElf53-YuShvAicbgEGoxT0Cz4o1qZPkBVHEGUzJPcEGMQVLU/exec';
+            const url = `https://script.google.com/macros/s/AKfycbzihxNPuKdsoNWXfllTElf53-YuShvAicbgEGoxT0Cz4o1qZPkBVHEGUzJPcEGMQVLU/exec?name=${encodeURIComponent(name)}`;
 
-            // Send data to Google Sheets
-            fetch(url, {
-                redirect: "follow",
-                method: 'POST',
-                body: JSON.stringify({ name }),
-                headers: { "Content-Type": "text/plain;charset=utf-8"}
-            })
-                .then(response => response.text())
-                .then(data => alert(data))
+            // Send GET request to Google Apps Script
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.status === 'success') {
+                        alert('Data saved successfully!');
+                    } else {
+                        alert(`Error: ${data.message}`);
+                    }
+                })
                 .catch(error => console.error('Error:', error));
         });
     </script>
