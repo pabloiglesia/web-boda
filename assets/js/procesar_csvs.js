@@ -93,7 +93,9 @@ async function cargarHoteles() {
                       <div class="card-pinned">
                         <img class="card-img-top" src="${row.Imagen}" alt="Image Description">
                         <span class="badge bg-dark text-white card-pinned-top-end">
-                          ${'★'.repeat(row.Estrellas)}${'☆'.repeat(5 - row.Estrellas)}
+                        ${isNaN(row.Estrellas) 
+                            ? row.Estrellas 
+                            : '★'.repeat(row.Estrellas) + '☆'.repeat(5 - row.Estrellas)}
                         </span>
                       </div>
                       ${row.Descuento ? `<div class="bg-success text-white text-center p-2">${row.Descuento}</div>` : ''}
