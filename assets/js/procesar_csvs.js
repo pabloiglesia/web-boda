@@ -116,7 +116,7 @@ async function cargarHoteles() {
                             del pazo
                         </p>
                       </div>
-                      <div class="card-footer pt-0">
+                      <div class="card-footer">
                         <span class="card-link">Ir a la web</span>
                       </div>
                     </a>
@@ -125,6 +125,9 @@ async function cargarHoteles() {
                   <!-- End Slide -->
                 `);
             });
+            if ($('#hoteles').children().length > 0) {
+                $('#arrows').show();
+            }
         },
         error: function (error) {
             alert("Error parsing CSV file: " + error.message);
