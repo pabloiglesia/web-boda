@@ -1,39 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google Sheets Form</title>
+  <!-- Required Meta Tags Always Come First -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Title -->
+  <title>Boda Bea y Pablo</title>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="/assets/img/logo-4.png">
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- CSS Implementing Plugins -->
+  <link rel="stylesheet" href="/assets/vendor/bootstrap-icons/font/bootstrap-icons.css">
+
+  <!-- CSS Unify Template -->
+  <link rel="stylesheet" href="/assets/css/theme.css">
 </head>
-<body>
-    <h1>Register Form</h1>
-    <form id="registerForm">
-        <label for="name">Nombre:</label>
-        <input type="text" id="name" name="name" required><br><br>
-        <button type="submit">Submit</button>
-    </form>
-    <script>
-        document.getElementById('registerForm').addEventListener('submit', function (e) {
-            e.preventDefault();
 
-            // Get form data
-            const name = document.getElementById('name').value;
+<body class="bg-light">
+  <!-- ========== MAIN CONTENT ========== -->
+  <main id="content" role="main">
+    <!-- Content -->
+    <div class="container content-space-2 content-space-lg-3">
+      <!-- Header -->
+      <div class="text-center mb-7">
+        <div class="mb-3">
+          <a class="link link-secondary" href="/index.html"><i class="bi-arrow-left small me-1"></i>Atrás</a>
+        </div>
+        <h1>Confirmar Asistencia</h1>
+      </div>
+      <!-- End Header -->
 
-            // Endpoint URL (replace with your actual URL)
-            const url = `https://script.google.com/macros/s/AKfycbzihxNPuKdsoNWXfllTElf53-YuShvAicbgEGoxT0Cz4o1qZPkBVHEGUzJPcEGMQVLU/exec?name=${encodeURIComponent(name)}`;
+      <div class="w-lg-75 mx-lg-auto">
+        <!-- Card -->
+        <div class="card card-shadow">
+          <div class="card-body p-sm-7 p-md-10">
+            <form id="FormConfirmacionAsistencia">
+              
+              <!-- Nombre -->
+              <div class="mb-4">
+                <label class="form-label" for="ForNombre">Nombre</label>
+                <input type="text" class="form-control form-control-lg" name="FormNameFirstName" id="ForNombre" placeholder="Nombre" aria-label="Nombre">
+              </div>
+              <!-- End Nombre-->
 
-            // Send GET request to Google Apps Script
-            fetch(url)
-                .then(response => response.json())
-                .then(data => {
-                    if (data.status === 'success') {
-                        alert('Data saved successfully!');
-                    } else {
-                        alert(`Error: ${data.message}`);
-                    }
-                })
-                .catch(error => console.error('Error:', error));
-        });
-    </script>
+              <!-- Tipo de ménu -->
+              <div class="mb-4">
+                <label class="form-label" for="ForTipoMenu">Selecciona el menú que prefieras</label>
+                <select class="form-select form-select-lg" id="ForTipoMenu" aria-label="Selecciona el menú">
+                  <option selected>Normal</option>
+                  <option value="Vegano">Vegano</option>
+                  <option value="Vegetariano">Vegetariano</option>
+                  <option value="Sin Gluten">Sin Gluten</option>
+                  <option value="Infantil">Infantil</option>
+                </select>
+              </div>
+              <!-- End Tipo de menú -->
+
+              <!-- Alergias -->
+              <div class="mb-3">
+                <label for="ForAlergias" class="form-label">Alergias</label>
+                <textarea class="form-control" name="ForNameAlergias" id="ForAlergias" placeholder="Indica tus alergias" aria-label="Indica tus alergias" rows="3"></textarea>
+              </div>
+              <!-- End Alergias -->
+  
+              <div class="d-grid">
+                <button type="submit" class="btn btn-primary btn-lg">Confirmar asistencia</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- End Card -->
+      </div>
+    </div>
+    <!-- End Content -->
+  </main>
+  <!-- ========== END MAIN CONTENT ========== -->
+
+  <!-- ========== SECONDARY CONTENTS ========== -->
+
+  <!-- GUARDAR INFORMACION INTRODUCIDA -->
+  <script>
+    document.getElementById('FormConfirmacionAsistencia').addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        // Get form data
+        const nombre = document.getElementById('ForNombre').value;
+        const tipoMenu = document.getElementById('ForTipoMenu').value;
+        const alergias = document.getElementById('ForAlergias').value;
+
+        // Endpoint URL (replace with your actual URL)
+        const url = `https://script.google.com/macros/s/AKfycbzihxNPuKdsoNWXfllTElf53-YuShvAicbgEGoxT0Cz4o1qZPkBVHEGUzJPcEGMQVLU/exec?nombre=${encodeURIComponent(nombre)}&tipoMenu=${encodeURIComponent(tipoMenu)}&alergias=${encodeURIComponent(alergias)}`;
+
+        // Send GET request to Google Apps Script
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 'success') {
+                    alert('¡Gracias por confirmar tu asistencia!');
+                } else {
+                    alert(`Error: ${data.message}`);
+                }
+            })
+            .catch(error => console.error('Error:', error));
+    });
+</script>
+
+  <!-- Go To -->
+  <a class="js-go-to go-to position-fixed" href="javascript:;" style="visibility: hidden;"
+     data-hs-go-to-options='{
+       "offsetTop": 700,
+       "position": {
+         "init": {
+           "right": "2rem"
+         },
+         "show": {
+           "bottom": "2rem"
+         },
+         "hide": {
+           "bottom": "-2rem"
+         }
+       }
+     }'>
+    <i class="bi-chevron-up"></i>
+  </a>
+  <!-- ========== END SECONDARY CONTENTS ========== -->
+
+  <!-- JS Global Compulsory  -->
+  <script src="/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- JS Implementing Plugins -->
+  <script src="/assets/vendor/hs-go-to/dist/hs-go-to.min.js"></script>
+
+  <!-- JS Unify -->
+  <script src="/assets/js/theme.min.js"></script>
+
+  <!-- JS Plugins Init. -->
+  <script>
+    (function() {
+
+      // INITIALIZATION OF GO TO
+      // =======================================================
+      new HSGoTo('.js-go-to')
+    })()
+  </script>
 </body>
 </html>
