@@ -23,18 +23,30 @@ async function cargarRegalos() {
                     <!-- Col -->
                     <div class="col mb-7 mb-md-10">
                         <!-- Card -->
-                        <a class="card card-ghost card-transition-zoom h-100" data-bs-toggle="collapse" href="#${row.Regalo}IBAN" role="button">
-                            <!-- Foto -->
-                            <div class="card-pinned card-transition-zoom-item">
-                                <img class="card-img" src="${row.imagen}" alt="Image Description">
-                            </div>
-                            <!-- Texto -->
-                            <div class="card-body">
-                                <h4>${row.titulo}</h4>
-                                <p class="card-text">${row.descripcion}</p>
-                            </div>
+                        <div class="card card-ghost card-transition-zoom h-100">
+                            <a data-bs-toggle="collapse" href="#${row.Regalo}IBAN" role="button">
+                                <!-- Foto -->
+                                <div class="card-pinned card-transition-zoom-item">
+                                    <img class="card-img" src="${row.imagen}" alt="Image Description">
+                                </div>
+                                <!-- Texto -->
+                                <div class="card-body">
+                                    <h4>${row.titulo}</h4>
+                                    <p class="card-text">${row.descripcion}</p>
+                                </div>
+
+                                <!-- Barra de progreso -->
+                                <div class="progress mb-3" style="height: 15px;">
+                                    <div id="${row.Regalo}" class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: ${(row.Recaudado / row.Coste_Total) * 100}%">${Math.min(100,Math.round((row.Recaudado / row.Coste_Total) * 100))}%</div>
+                                </div>
+                                <!-- Participa -->
+                                <div class="card-footer">
+                                    <span class="card-link">Participa</span>
+                                </div>
+                            </a>
+                            <!-- End Card -->
                             <!-- IBAN -->
-                            <div class="collapse" id="${row.Regalo}IBAN">
+                            <div class="collapse mt-5" id="${row.Regalo}IBAN">
                                 <div class="alert alert-soft-primary" role="alert">
                                     <b>Participa a través del siguiente IBAN:</b> ES8515830001129192861889
                                     <br>
@@ -43,18 +55,10 @@ async function cargarRegalos() {
                                     <b>Concepto:</b> ${row.concepto}
                                 </div>
                             </div>
-                            <!-- Barra de progreso -->
-                            <div class="progress" style="height: 15px;">
-                                <div id="${row.Regalo}" class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: ${(row.Recaudado / row.Coste_Total) * 100}%">${Math.min(100,Math.round((row.Recaudado / row.Coste_Total) * 100))}%</div>
-                            </div>
-                            <!-- Participa -->
-                            <div class="card-footer">
-                                <span class="card-link">Participa</span>
-                            </div>
-                        </a>
-                        <!-- End Card -->
+                        </div>
                     </div>
                     <!-- End Col -->
+
                 `);
             });
         },
