@@ -19,6 +19,10 @@
 
   <!-- CSS Unify Template -->
   <link rel="stylesheet" href="/assets/css/theme.css">
+  
+  <!-- JS Cargar Formulario -->
+  <script src="/assets/js/formulario.js"></script>
+
 </head>
 
 <body class="bg-light">
@@ -39,38 +43,26 @@
         <!-- Card -->
         <div class="card card-shadow">
           <div class="card-body p-sm-7 p-md-10">
-            <form id="FormConfirmacionAsistencia">
+            <form id="FormNumeroPersonas" onsubmit="return false;">
 
-              <!-- Nombre -->
+              <!-- Número de personas -->
               <div class="mb-4">
-                <label class="form-label" for="ForNombre">Nombre</label>
-                <input type="text" class="form-control form-control-lg" name="FormNameFirstName" id="ForNombre" placeholder="Nombre" aria-label="Nombre">
+                <label class="form-label" for="forNumPersonas">¿Cuántas personas vais a venir a la boda?</label>
+                <input type="number" class="form-control form-control-lg col-sm-6" name="FormNameNumPersonas" id="forNumPersonas" placeholder="Número de personas" aria-label="Número de personas" min="1">
               </div>
-              <!-- End Nombre-->
-
-              <!-- Tipo de ménu -->
-              <div class="mb-4">
-                <label class="form-label" for="ForTipoMenu">Selecciona el menú que prefieras</label>
-                <select class="form-select form-select-lg" id="ForTipoMenu" aria-label="Selecciona el menú">
-                  <option selected>Normal</option>
-                  <option value="Vegano">Vegano</option>
-                  <option value="Vegetariano">Vegetariano</option>
-                  <option value="Sin Gluten">Sin Gluten</option>
-                  <option value="Infantil">Infantil</option>
-                </select>
-              </div>
-              <!-- End Tipo de menú -->
-
-              <!-- Alergias -->
-              <div class="mb-3">
-                <label for="ForAlergias" class="form-label">Alergias</label>
-                <textarea class="form-control" name="ForNameAlergias" id="ForAlergias" placeholder="Indica tus alergias" aria-label="Indica tus alergias" rows="3"></textarea>
-              </div>
-              <!-- End Alergias -->
+              <!-- End Número de personas-->
 
               <div class="d-grid">
-                <button type="submit" class="btn btn-primary btn-lg">Confirmar asistencia</button>
+                <button type="button" class="btn btn-primary btn-lg" id="botonConfirmarNumeroPersonas" onclick="cargarFormulario()">Aceptar</button>
               </div>
+
+            </form>
+
+            <form id="FormInvitados">
+              <!-- Contenedor de preguntas -->
+              <div id="contenedor-formulario"></div>
+              <!-- End Contenedor de preguntas-->
+
             </form>
           </div>
         </div>
@@ -85,30 +77,14 @@
 
   <!-- GUARDAR INFORMACION INTRODUCIDA -->
   <script>
-    document.getElementById('FormConfirmacionAsistencia').addEventListener('submit', function (e) {
+    document.getElementById('FormInvitados').addEventListener('submit', function (e) {
         e.preventDefault();
 
-        // Get form data
-        const nombre = document.getElementById('ForNombre').value;
-        const tipoMenu = document.getElementById('ForTipoMenu').value;
-        const alergias = document.getElementById('ForAlergias').value;
+        guardarInformacion();
 
-        // Endpoint URL (replace with your actual URL)
-        const url = `https://script.google.com/macros/s/AKfycbzihxNPuKdsoNWXfllTElf53-YuShvAicbgEGoxT0Cz4o1qZPkBVHEGUzJPcEGMQVLU/exec?nombre=${encodeURIComponent(nombre)}&tipoMenu=${encodeURIComponent(tipoMenu)}&alergias=${encodeURIComponent(alergias)}`;
-
-        // Send GET request to Google Apps Script
-        fetch(url)
-            .then(response => response.json())
-            .then(data => {
-                if (data.status === 'success') {
-                    alert('¡Gracias por confirmar tu asistencia!');
-                } else {
-                    alert(`Error: ${data.message}`);
-                }
-            })
-            .catch(error => console.error('Error:', error));
     });
-</script>
+  </script>
+  <!-- END GUARDAR INFORMACION INTRODUCIDA -->
 
   <!-- Go To -->
   <a class="js-go-to go-to position-fixed" href="javascript:;" style="visibility: hidden;"
