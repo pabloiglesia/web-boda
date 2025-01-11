@@ -128,7 +128,7 @@ function guardarInformacion(){
                 if (statuses.every(status => status === 'success')) {
                     window.location.href = '/paginas/formulario-registro-ok.html';
                 } else {
-                    alert('Hubo un error al guardar algunos datos.');
+                    window.location.href = '/paginas/formulario-registro-ko.html';
                 }
             });
 
