@@ -126,8 +126,7 @@ function guardarInformacion(){
         Promise.all(respuestasPeticiones)
             .then(statuses => {
                 if (statuses.every(status => status === 'success')) {
-                    alert('Todos los datos se han guardado correctamente.');
-                    window.location.href = '/';
+                    window.location.href = '/paginas/formulario-registro-ok.html';
                 } else {
                     alert('Hubo un error al guardar algunos datos.');
                 }
