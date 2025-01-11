@@ -62,12 +62,29 @@ function cargarFormulario() {
         `;
         contenedor.appendChild(botonConfirmar);
 
+        // Loader
+        const loader = document.createElement('div');
+        loader.innerHTML = `
+            <div class="loader-overlay" id="loader">
+                <div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
+                    <div class="spinner-border" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+            </div>
+        `;
+        contenedor.appendChild(loader);
+
+
     } else {
         alert('Por favor, introduzca un número válido de invitados.');
     }
 }
 
 function guardarInformacion(){
+
+    // Mostrar el loader
+    document.getElementById('loader').style.display = 'block';
     
     const numPersonas = parseInt(document.getElementById('forNumPersonas').value, 10);
 
