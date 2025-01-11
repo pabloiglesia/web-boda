@@ -41,6 +41,13 @@ function cargarFormulario() {
                 <textarea class="form-control" name="ForNameAlergias" id="ForAlergias-${i}" placeholder="Indica tus alergias" aria-label="Indica tus alergias" rows="3"></textarea>
                 </div>
                 <!-- End Alergias -->
+
+                <!-- Observaciones -->
+                <div class="mb-3">
+                <label for="ForObservaciones-${i}" class="form-label">Observaciones</label>
+                <textarea class="form-control" name="ForNameAlergias" id="ForObservaciones-${i}" placeholder="¿Hay algo más que nos quieras decir?" aria-label="¿Hay algo más que nos quieras decir?" rows="3"></textarea>
+                </div>
+                <!-- End Observaciones -->
             `;
             contenedor.appendChild(section);
         }
@@ -75,9 +82,10 @@ function guardarInformacion(){
             const nombre = document.getElementById(`ForNombre-${i}`).value;
             const tipoMenu = document.getElementById(`ForTipoMenu-${i}`).value;
             const alergias = document.getElementById(`ForAlergias-${i}`).value;
+            const observaciones = document.getElementById(`ForObservaciones-${i}`).value;
 
             // Endpoint URL (replace with your actual URL)
-            const url = `https://script.google.com/macros/s/AKfycbzihxNPuKdsoNWXfllTElf53-YuShvAicbgEGoxT0Cz4o1qZPkBVHEGUzJPcEGMQVLU/exec?nombre=${encodeURIComponent(nombre)}&tipoMenu=${encodeURIComponent(tipoMenu)}&alergias=${encodeURIComponent(alergias)}`;
+            const url = `https://script.google.com/macros/s/AKfycbzihxNPuKdsoNWXfllTElf53-YuShvAicbgEGoxT0Cz4o1qZPkBVHEGUzJPcEGMQVLU/exec?nombre=${encodeURIComponent(nombre)}&tipoMenu=${encodeURIComponent(tipoMenu)}&alergias=${encodeURIComponent(alergias)}&observaciones=${encodeURIComponent(observaciones)}`;
 
             // Send GET request to Google Apps Script
             respuestasPeticiones.push(
