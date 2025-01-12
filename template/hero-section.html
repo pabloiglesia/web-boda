@@ -1,4 +1,4 @@
-<div class="container content-space-t-3">
+<div class="container content-space-t-2">
     <div class="row justify-content-lg-between align-items-lg-center">
       <div class="col-lg-5 mb-5 mb-lg-0">
         <div class="mb-5">
@@ -14,17 +14,155 @@
       <!-- End Col -->
 
       <div class="col-lg-6">
-        <div class="position-relative">
-          <div class="position-relative">
-            <img class="img-fluid" src="/galeria/beaYPablo1.jpeg" alt="Image Description">
-
-            <div class="position-absolute bottom-0 end-0">
-              <img class="w-100" src="" alt="" style="max-width: 30rem;">
+        <!-- Swiper Main -->
+        <div class="js-swiper-pagination-progress-with-thumbs-main swiper mb-5">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img class="img-fluid" src="/galeria/carrusel/1.png" alt="Image Description">
+            </div>
+            <div class="swiper-slide">
+              <img class="img-fluid" src="/galeria/carrusel/2.png" alt="Image Description">
+            </div>
+            <div class="swiper-slide">
+              <img class="img-fluid" src="/galeria/carrusel/3.png" alt="Image Description">
+            </div>
+            <div class="swiper-slide">
+              <img class="img-fluid" src="/galeria/carrusel/4.png" alt="Image Description">
+            </div>
+            <div class="swiper-slide">
+              <img class="img-fluid" src="/galeria/carrusel/5.png" alt="Image Description">
+            </div>
+            <div class="swiper-slide">
+              <img class="img-fluid" src="/galeria/carrusel/6.png" alt="Image Description">
+            </div>
+            <div class="swiper-slide">
+              <img class="img-fluid" src="/galeria/carrusel/7.png" alt="Image Description">
             </div>
           </div>
         </div>
+        <!-- End Swiper Main -->
+
+        <!-- Swiper Thumbs -->
+        <div class="js-swiper-pagination-progress-with-thumbs swiper">
+          <div class="swiper-wrapper">
+            <!-- Slide -->
+            <div class="swiper-slide swiper-pagination-progress">
+              <div class="swiper-pagination-progress-body mb-4">
+                <div class="js-swiper-pagination-progress-body-helper swiper-pagination-progress-body-helper"></div>
+              </div>
+            </div>
+            <!-- End Slide -->
+
+            <!-- Slide -->
+            <div class="swiper-slide swiper-pagination-progress">
+              <div class="swiper-pagination-progress-body mb-4">
+                <div class="js-swiper-pagination-progress-body-helper swiper-pagination-progress-body-helper"></div>
+              </div>
+            </div>
+            <!-- End Slide -->
+
+            <!-- Slide -->
+            <div class="swiper-slide swiper-pagination-progress">
+              <div class="swiper-pagination-progress-body mb-4">
+                <div class="js-swiper-pagination-progress-body-helper swiper-pagination-progress-body-helper"></div>
+              </div>
+            </div>
+            <!-- End Slide -->
+
+            <!-- Slide -->
+            <div class="swiper-slide swiper-pagination-progress">
+              <div class="swiper-pagination-progress-body mb-4">
+                <div class="js-swiper-pagination-progress-body-helper swiper-pagination-progress-body-helper"></div>
+              </div>
+            </div>
+            <!-- End Slide -->
+
+            <!-- Slide -->
+            <div class="swiper-slide swiper-pagination-progress">
+              <div class="swiper-pagination-progress-body mb-4">
+                <div class="js-swiper-pagination-progress-body-helper swiper-pagination-progress-body-helper"></div>
+              </div>
+            </div>
+            <!-- End Slide -->
+
+            <!-- Slide -->
+            <div class="swiper-slide swiper-pagination-progress">
+              <div class="swiper-pagination-progress-body mb-4">
+                <div class="js-swiper-pagination-progress-body-helper swiper-pagination-progress-body-helper"></div>
+              </div>
+            </div>
+            <!-- End Slide -->
+            <!-- Slide -->
+            <div class="swiper-slide swiper-pagination-progress">
+              <div class="swiper-pagination-progress-body mb-4">
+                <div class="js-swiper-pagination-progress-body-helper swiper-pagination-progress-body-helper"></div>
+              </div>
+            </div>
+            <!-- End Slide -->
+          </div>
+        </div>
+        <!-- End Swiper Thumbs -->
       </div>
       <!-- End Col -->
     </div>
     <!-- End Row -->
   </div>
+
+<!-- JS Plugins Init. -->
+<script>
+  (function() {
+    // INITIALIZATION OF SWIPER
+    // =======================================================
+    var paginationProgressWithThumbsThumbs = new Swiper('.js-swiper-pagination-progress-with-thumbs', {
+      watchSlidesVisibility: true,
+      watchSlidesProgress: true,
+      history: false,
+      breakpoints: {
+        480: {
+          slidesPerView: 2,
+          spaceBetween: 15,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 15,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 15,
+        },
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 15,
+        },
+        1024: {
+          slidesPerView: 5,
+          spaceBetween: 15,
+        },
+        1024: {
+          slidesPerView: 6,
+          spaceBetween: 15,
+        },
+        1024: {
+          slidesPerView: 7,
+          spaceBetween: 15,
+        },
+
+      },
+      on: {
+        'afterInit': function (swiper) {
+          swiper.el.querySelectorAll('.js-swiper-pagination-progress-body-helper')
+          .forEach($progress => $progress.style.transitionDuration = `${swiper.params.autoplay.delay}ms`)
+        }
+      }
+    });
+
+    var paginationProgressWithThumbsMain = new Swiper('.js-swiper-pagination-progress-with-thumbs-main', {
+      effect: 'fade',
+      autoplay: true,
+      loop: true,
+      thumbs: {
+        swiper: paginationProgressWithThumbsThumbs
+      }
+    })
+  })()
+</script>
