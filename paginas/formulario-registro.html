@@ -23,6 +23,9 @@
   <!-- JS Cargar Formulario -->
   <script src="/assets/js/formulario.js"></script>
 
+  <!-- reCAPTCHA -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
 </head>
 
 <body class="bg-light">
@@ -71,10 +74,32 @@
 
             </form>
 
-            <form id="FormInvitados">
+            <form id="FormInvitados" method="GET" style="display: none;">
               <!-- Contenedor de preguntas -->
               <div id="contenedor-formulario"></div>
               <!-- End Contenedor de preguntas-->
+
+              <!-- reCAPTCHA -->
+              <div class="d-grid">
+                <div class="g-recaptcha" data-sitekey="6LcjU7UqAAAAAOmVaXu0Sbi5ELurZeMXTQEdX2v5"></div>
+              </div>
+              <!-- End reAPTHCA -->
+
+              <!-- Botón Confirmar -->
+              <div class="d-grid">
+                <button type="submit" class="btn btn-primary btn-lg" id="botonConfirmarAsistencia">Confirmar asistencia</button>
+              </div>
+              <!-- End Botón Confirmar-->
+
+              <!-- Loader -->
+              <div class="loader-overlay" id="loader">
+                <div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
+                    <div class="spinner-border" role="status">
+                        <span class="visually-hidden">Cargando...</span>
+                    </div>
+                </div>
+              </div>
+              <!-- End Loader -->
 
             </form>
           </div>

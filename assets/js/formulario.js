@@ -9,6 +9,9 @@ function cargarFormulario() {
         const formularioNumPersonas = document.getElementById('FormNumeroPersonas');
         formularioNumPersonas.style.display = 'none';
 
+        const formularioInvitados = document.getElementById('FormInvitados');
+        formularioInvitados.style.display = 'block';
+
         for (let i = 1; i <= numPersonas; i++) {
             const section = document.createElement('div');
 
@@ -52,30 +55,6 @@ function cargarFormulario() {
             contenedor.appendChild(section);
         }
 
-        // Mostrar Botón de confirmar asistencia de invitados
-        
-        const botonConfirmar = document.createElement('div');
-        botonConfirmar.innerHTML = `
-            <div class="d-grid">
-                <button type="submit" class="btn btn-primary btn-lg" id="botonConfirmarAsistencia">Confirmar asistencia</button>
-              </div>
-        `;
-        contenedor.appendChild(botonConfirmar);
-
-        // Loader
-        const loader = document.createElement('div');
-        loader.innerHTML = `
-            <div class="loader-overlay" id="loader">
-                <div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
-                    <div class="spinner-border" role="status">
-                        <span class="visually-hidden">Loading...</span>
-                    </div>
-                </div>
-            </div>
-        `;
-        contenedor.appendChild(loader);
-
-
     } else {
         alert('Por favor, introduzca un número válido de invitados.');
     }
@@ -91,46 +70,55 @@ function guardarInformacion(){
     if (numPersonas > 0) {
         
         const respuestasPeticiones = [];
+        var respuestaCAPTCHA = document.querySelector(".g-recaptcha-response").value;
 
-        for (let i = 1; i <= numPersonas; i++) {
+        if (!respuestaCAPTCHA) {
+            alert("Por favor, completa el reCAPTCHA.");
+             // No mostrar el loader
+            document.getElementById('loader').style.display = 'none';
+            return false;
+        } else {
 
-            // Recoger la información introducida
+            for (let i = 1; i <= numPersonas; i++) {
 
-            const nombre = document.getElementById(`ForNombre-${i}`).value;
-            const tipoMenu = document.getElementById(`ForTipoMenu-${i}`).value;
-            const alergias = document.getElementById(`ForAlergias-${i}`).value;
-            const observaciones = document.getElementById(`ForObservaciones-${i}`).value;
+                // Recoger la información introducida
 
-            // Endpoint URL (replace with your actual URL)
-            const url = `https://script.google.com/macros/s/AKfycbzihxNPuKdsoNWXfllTElf53-YuShvAicbgEGoxT0Cz4o1qZPkBVHEGUzJPcEGMQVLU/exec?nombre=${encodeURIComponent(nombre)}&tipoMenu=${encodeURIComponent(tipoMenu)}&alergias=${encodeURIComponent(alergias)}&observaciones=${encodeURIComponent(observaciones)}`;
+                const nombre = document.getElementById(`ForNombre-${i}`).value;
+                const tipoMenu = document.getElementById(`ForTipoMenu-${i}`).value;
+                const alergias = document.getElementById(`ForAlergias-${i}`).value;
+                const observaciones = document.getElementById(`ForObservaciones-${i}`).value;
 
-            // Send GET request to Google Apps Script
-            respuestasPeticiones.push(
-                fetch(url)
-                    .then(response => response.json())
-                    .then(data => {
-                        if (data.status != 'success') {
-                            throw new Error(`Error: ${data.message}`);
-                        }
-                        return data.status;
-                    })
-                    .catch(error => {
-                        console.error('Error:', error);
-                        return 'error';
-                    }) 
+                // Endpoint URL (replace with your actual URL)
+                const url = `https://script.google.com/macros/s/AKfycbzihxNPuKdsoNWXfllTElf53-YuShvAicbgEGoxT0Cz4o1qZPkBVHEGUzJPcEGMQVLU/exec?nombre=${encodeURIComponent(nombre)}&tipoMenu=${encodeURIComponent(tipoMenu)}&alergias=${encodeURIComponent(alergias)}&observaciones=${encodeURIComponent(observaciones)}&respuestaCAPTCHA=${encodeURIComponent(respuestaCAPTCHA)}`;
 
-            );
+                // Send GET request to Google Apps Script
+                respuestasPeticiones.push(
+                    fetch(url)
+                        .then(response => response.json())
+                        .then(data => {
+                            if (data.status != 'success') {
+                                throw new Error(`Error: ${data.message}`);
+                            }
+                            return data.status;
+                        })
+                        .catch(error => {
+                            console.error('Error:', error);
+                            return 'error';
+                        }) 
 
+                );
+
+            }
+
+            Promise.all(respuestasPeticiones)
+                .then(statuses => {
+                    if (statuses.every(status => status === 'success')) {
+                        window.location.href = '/paginas/formulario-registro-ok.html';
+                    } else {
+                        window.location.href = '/paginas/formulario-registro-ko.html';
+                    }
+                });
         }
-
-        Promise.all(respuestasPeticiones)
-            .then(statuses => {
-                if (statuses.every(status => status === 'success')) {
-                    window.location.href = '/paginas/formulario-registro-ok.html';
-                } else {
-                    window.location.href = '/paginas/formulario-registro-ko.html';
-                }
-            });
 
     }
 }
