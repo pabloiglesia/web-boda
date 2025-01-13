@@ -24,9 +24,9 @@ async function cargarRegalos() {
                     <div class="col mb-7 mb-md-10">
                         <!-- Card -->
                         <div class="card card-ghost card-transition-zoom h-100">
-                            <a data-bs-toggle="collapse" href="#${row.Regalo}IBAN" role="button">
+                            <a data-bs-toggle="collapse" href="#${row.Regalo}IBAN" role="button" onclick="document.getElementById('${row.Regalo}Imagen').scrollIntoView({ behavior: 'smooth'});">
                                 <!-- Foto -->
-                                <div class="card-pinned card-transition-zoom-item">
+                                <div class="card-pinned card-transition-zoom-item" id="${row.Regalo}Imagen" >
                                     <img class="card-img" src="${row.imagen}" alt="Image Description">
                                 </div>
                                 <!-- Texto -->
@@ -41,14 +41,14 @@ async function cargarRegalos() {
                                 </div>
                                 <!-- Participa -->
                                 <div class="card-footer">
-                                    <span class="card-link">Participa</span>
+                                    <span class="card-link">Regalar</span>
                                 </div>
                             </a>
                             <!-- End Card -->
                             <!-- IBAN -->
                             <div class="collapse mt-5" id="${row.Regalo}IBAN">
                                 <div class="alert alert-soft-primary" role="alert">
-                                    <b>Participa a través del siguiente IBAN:</b> ES8515830001129192861889
+                                    <b>IBAN:</b> ES8515830001129192861889
                                     <br>
                                     <b>Código BIC/SWIFT:</b> REVOESM2
                                     <br>
