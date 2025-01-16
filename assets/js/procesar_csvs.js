@@ -18,8 +18,21 @@ async function cargarRegalos() {
 
             // Find the record with the matching id
             $(`#RecargarRegalos`).remove();
+            var secciones = [];
             data.forEach(row => {
-                $(`#${row.Seccion}`).append(`
+                if (!secciones.includes(row.Seccion)) {
+                    secciones.push(row.Seccion);
+                    const seccionId = row.Seccion.replace(/\s+/g, '');
+                    $('#regalos').append(`
+                        <!-- Sección -->
+                        <div class="text-center mx-lg-auto">
+                            <h3 class="divider-center mb-5">${row.Seccion}</h3>
+                            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 gx-7 justify-content-center" id="${seccionId}"></div>
+                        </div>
+                        <!-- End Sección -->
+                    `);
+                }
+                $(`#${row.Seccion.replace(/\s+/g, '')}`).append(`
                     <!-- Col -->
                     <div class="col mb-7 mb-md-10">
                         <!-- Card -->
