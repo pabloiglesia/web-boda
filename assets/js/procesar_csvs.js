@@ -133,7 +133,7 @@ async function cargarHoteles() {
 
             data.forEach(row => {
                 console.log(row); // Imprime la fila en la consola
-                $('#modalesRegalos').append(`
+                $('#modalesHoteles').append(`
                     ${row.Anotaciones ? `
                     <!-- Modal -->
                     <div class="modal fade" id="modal${row.id}" tabindex="-1" aria-labelledby="modalLabel${row.id}" aria-hidden="true">
