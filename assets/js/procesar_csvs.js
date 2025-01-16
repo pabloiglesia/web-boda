@@ -53,7 +53,7 @@ async function cargarRegalos() {
                                     <div id="${row.Regalo}" class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: ${(row.Recaudado / row.Coste_Total) * 100}%">${Math.min(100,Math.round((row.Recaudado / row.Coste_Total) * 100))}%</div>
                                 </div>
                                 <!-- Participa -->
-                                <div class="card-footer">
+                                <div class="card-footer text-start">
                                     <span class="card-link">Regalar</span>
                                 </div>
                             </a>
