@@ -17,9 +17,9 @@ async function cargarRegalos() {
             });
 
             // Find the record with the matching id
-            $('#regalos').empty();
+            $(`#RecargarRegalos`).remove();
             data.forEach(row => {
-                $('#regalos').append(`
+                $(`#${row.Seccion}`).append(`
                     <!-- Col -->
                     <div class="col mb-7 mb-md-10">
                         <!-- Card -->
@@ -58,7 +58,6 @@ async function cargarRegalos() {
                         </div>
                     </div>
                     <!-- End Col -->
-
                 `);
             });
         },
