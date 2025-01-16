@@ -93,7 +93,7 @@ async function cargarHoteles() {
                 <!-- Slide -->
                   <div class="swiper-slide pt-4 pb-8">
                     <!-- Card -->
-                    <a class="card card-transition" href="${row.Web}" target="_blank">
+                    <a class="card card-transition" href="${row.Anotaciones ? '#' : row.Web}" ${row.Anotaciones ? `data-bs-toggle="modal" data-bs-target="#modal${row.id}"` : 'target="_blank"'}>
                       <div class="card-pinned">
                         <img class="card-img-top" src="${row.Imagen}" alt="Image Description">
                         <span class="badge bg-dark text-white card-pinned-top-end fs-4">
@@ -120,12 +120,43 @@ async function cargarHoteles() {
                                 <br>
                             </p>
                         </div>
-                        <span class="card-link">Ir a la web</span>
+                        <span class="card-link">${row.Anotaciones ? 'Ver anotaciones' : 'Ir a la web'}</span>
                       </div>
                     </a>
                     <!-- End Card -->
                   </div>
                   <!-- End Slide -->
+                `);
+            });
+            if ($('#hoteles').children().length > 0) {
+                $('#arrows').show();
+            }
+
+            data.forEach(row => {
+                console.log(row); // Imprime la fila en la consola
+                $('#modalesRegalos').append(`
+                    ${row.Anotaciones ? `
+                    <!-- Modal -->
+                    <div class="modal fade" id="modal${row.id}" tabindex="-1" aria-labelledby="modalLabel${row.id}" aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header text-center">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                            <img class="card-img-top mt-3" src="${row.Imagen}" alt="Image Description">
+                          <div class="modal-body text-dark">
+                            <h3 class="modal-title" id="modalLabel${row.id}">${row.Nombre}</h3>
+                            <p>${row.Anotaciones}</p>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <a type="button" class="btn btn-primary" href="${row.Web}" target="_blank">Reservar</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- End Modal -->
+                    ` : ''}
                 `);
             });
             if ($('#hoteles').children().length > 0) {
