@@ -79,6 +79,8 @@ function guardarInformacion(){
             return false;
         } else {
 
+            const invitados = [];
+
             for (let i = 1; i <= numPersonas; i++) {
 
                 // Recoger la información introducida
@@ -88,27 +90,33 @@ function guardarInformacion(){
                 const alergias = document.getElementById(`ForAlergias-${i}`).value;
                 const observaciones = document.getElementById(`ForObservaciones-${i}`).value;
 
-                // Endpoint URL (replace with your actual URL)
-                const url = `https://script.google.com/macros/s/AKfycbzihxNPuKdsoNWXfllTElf53-YuShvAicbgEGoxT0Cz4o1qZPkBVHEGUzJPcEGMQVLU/exec?nombre=${encodeURIComponent(nombre)}&tipoMenu=${encodeURIComponent(tipoMenu)}&alergias=${encodeURIComponent(alergias)}&observaciones=${encodeURIComponent(observaciones)}&respuestaCAPTCHA=${encodeURIComponent(respuestaCAPTCHA)}`;
-
-                // Send GET request to Google Apps Script
-                respuestasPeticiones.push(
-                    fetch(url)
-                        .then(response => response.json())
-                        .then(data => {
-                            if (data.status != 'success') {
-                                throw new Error(`Error: ${data.message}`);
-                            }
-                            return data.status;
-                        })
-                        .catch(error => {
-                            console.error('Error:', error);
-                            return 'error';
-                        }) 
-
-                );
+                invitados.push({ nombre, tipoMenu, alergias, observaciones });
 
             }
+
+            const url = "https://script.google.com/macros/s/AKfycbzlFWFl77Ge2iA8le4WbJ8i4Hni1I9k4YC6AmSRcdC3slYL5kgWmI4SwFJihVxLuzEo/exec";
+
+            const params = new URLSearchParams({
+                invitados: JSON.stringify(invitados),
+                respuestaCAPTCHA: respuestaCAPTCHA
+            }).toString();
+
+            // Send GET request to Google Apps Script
+            respuestasPeticiones.push(
+                fetch(`${url}?${params}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.status != 'success') {
+                            throw new Error(`Error: ${data.message}`);
+                        }
+                        return data.status;
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        return 'error';
+                    }) 
+
+            );
 
             Promise.all(respuestasPeticiones)
                 .then(statuses => {

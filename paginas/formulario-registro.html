@@ -24,7 +24,15 @@
   <script src="/assets/js/formulario.js"></script>
 
   <!-- reCAPTCHA -->
-  <script src="https://www.google.com/recaptcha/api.js?hl=es" async defer></script>
+  <!-- <script src="https://www.google.com/recaptcha/api.js?hl=es" async defer></script> -->
+  <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit&hl=es" async defer></script>
+<script>
+  var onloadCallback = function() {
+    grecaptcha.render('recaptcha-container', {
+      'sitekey': '6LcjU7UqAAAAAOmVaXu0Sbi5ELurZeMXTQEdX2v5'
+    });
+  };
+</script>
 
 </head>
 
@@ -80,8 +88,11 @@
               <!-- End Contenedor de preguntas-->
 
               <!-- reCAPTCHA -->
-              <div class="d-grid">
+              <!-- <div class="d-grid">
                 <div class="g-recaptcha" data-sitekey="6LcjU7UqAAAAAOmVaXu0Sbi5ELurZeMXTQEdX2v5"></div>
+              </div> -->
+              <div class="d-grid">
+                <div class="g-recaptcha" id="recaptcha-container"></div>
               </div>
               <!-- End reAPTHCA -->
 
