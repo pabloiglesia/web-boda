@@ -24,15 +24,7 @@
   <script src="/assets/js/formulario.js"></script>
 
   <!-- reCAPTCHA -->
-  <!-- <script src="https://www.google.com/recaptcha/api.js?hl=es" async defer></script> -->
-  <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit&hl=es" async defer></script>
-<script>
-  var onloadCallback = function() {
-    grecaptcha.render('recaptcha-container', {
-      'sitekey': '6LcjU7UqAAAAAOmVaXu0Sbi5ELurZeMXTQEdX2v5'
-    });
-  };
-</script>
+  <script src="https://www.google.com/recaptcha/api.js?hl=es" async defer></script>
 
 </head>
 
@@ -54,19 +46,42 @@
         <!-- Card -->
         <div class="card card-shadow">
           <div class="card-body p-sm-7 p-md-10">
-            <form id="FormInvitados" method="GET" style="display: none;">
-              <input type="hidden" id="forNumPersonas" value="1">
+            <form id="FormNumeroPersonas" onsubmit="return false;">
 
+              <!-- Número de personas -->
+              <div class="mb-4">
+                <label class="form-label" for="forNumPersonas">¿Cuántas personas vais a venir a la boda?</label>
+                <select class="form-select" name="FormNameNumPersonas" id="forNumPersonas">
+                  <option selected="" value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+              </div>
+              <!-- Select -->
+              <!-- End Select -->
+              <!-- End Número de personas-->
+
+              <div class="d-grid">
+                <button type="button" class="btn btn-primary btn-lg" id="botonConfirmarNumeroPersonas" onclick="cargarFormulario()">Aceptar</button>
+              </div>
+
+            </form>
+
+            <form id="FormInvitados" method="GET" style="display: none;">
               <!-- Contenedor de preguntas -->
               <div id="contenedor-formulario"></div>
               <!-- End Contenedor de preguntas-->
 
               <!-- reCAPTCHA -->
-              <!-- <div class="d-grid">
-                <div class="g-recaptcha" data-sitekey="6LcjU7UqAAAAAOmVaXu0Sbi5ELurZeMXTQEdX2v5"></div>
-              </div> -->
               <div class="d-grid">
-                <div class="g-recaptcha" id="recaptcha-container"></div>
+                <div class="g-recaptcha" data-sitekey="6LcjU7UqAAAAAOmVaXu0Sbi5ELurZeMXTQEdX2v5"></div>
               </div>
               <!-- End reAPTHCA -->
 
@@ -100,20 +115,11 @@
 
   <!-- GUARDAR INFORMACION INTRODUCIDA -->
   <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      cargarFormulario();
-      function checkFormInvitados() {
-        var formInvitados = document.getElementById('FormInvitados');
-        if (formInvitados) {
-          formInvitados.addEventListener('submit', function (e) {
-              e.preventDefault();
-              guardarInformacion();
-          });
-        } else {
-          console.error('El elemento FormInvitados no se encuentra en el DOM.');
-        }
-      }
-      checkFormInvitados();
+    document.getElementById('FormInvitados').addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        guardarInformacion();
+
     });
   </script>
   <!-- END GUARDAR INFORMACION INTRODUCIDA -->
