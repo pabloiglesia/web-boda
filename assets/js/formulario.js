@@ -7,7 +7,8 @@ function cargarFormulario() {
 
         // Hacer desaparecer form de número de invitados
         const formularioNumPersonas = document.getElementById('FormNumeroPersonas');
-        formularioNumPersonas.style.display = 'none';
+        if (formularioNumPersonas)
+            formularioNumPersonas.style.display = 'none';
 
         const formularioInvitados = document.getElementById('FormInvitados');
         formularioInvitados.style.display = 'block';
@@ -64,11 +65,11 @@ function guardarInformacion(){
 
     // Mostrar el loader
     document.getElementById('loader').style.display = 'block';
-    
+
     const numPersonas = parseInt(document.getElementById('forNumPersonas').value, 10);
 
     if (numPersonas > 0) {
-        
+
         const respuestasPeticiones = [];
         var respuestaCAPTCHA = document.querySelector(".g-recaptcha-response").value;
 
