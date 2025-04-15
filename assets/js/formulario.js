@@ -22,7 +22,7 @@ function cargarFormulario() {
                 <!-- Nombre -->
                 <div class="mb-4">
                 <label class="form-label" for="ForNombre-${i}">Nombre y apellidos</label>
-                <input type="text" class="form-control form-control-lg" name="FormNameFirstName" id="ForNombre-${i}" placeholder="Nombre" aria-label="Nombre">
+                <input type="text" class="form-control form-control-lg" name="FormNameFirstName" id="ForNombre-${i}" placeholder="Nombre y apellidos" aria-label="Nombre">
                 </div>
                 <!-- End Nombre-->
 
