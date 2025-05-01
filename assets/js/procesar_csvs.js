@@ -73,11 +73,30 @@ async function cargarRegalos() {
                     <!-- End Col -->
                 `);
             });
+
         },
         error: function (error) {
             alert("Error parsing CSV file: " + error.message);
         }
     });
+
+    $('#regalos').append(`
+        <!-- Sección -->
+        <div class="text-center mx-lg-auto">
+            <h3 class="divider-center mb-5">Transferencia bancaria</h3>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 gx-7 justify-content-center" id="sec-transferencia"></div>
+        </div>
+        <!-- End Sección -->
+
+        <div class="w-lg-65 text-center mx-lg-auto mb-5 mb-sm-7 mb-lg-10">
+            <div class="alert alert-soft-primary" role="alert">
+                Si no te convence ninguna de las opciones anteriores pero aún así quieres ayudarnos, puedes hacernos una transferencia bancaria a la siguiente cuenta.
+                <br><br>
+                <h4 style="color: #77BFA3;">ES85 1583 0001 1291 9286 1889</h4>
+            </div>
+        </div>
+
+    `);
 }
 
 async function cargarHoteles() {
