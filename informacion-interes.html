@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Required Meta Tags Always Come First -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Title -->
+  <title>Boda Bea y Pablo</title>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="/favicon.png">
+
+  <script src="https://cdn.jsdelivr.net/npm/papaparse/papaparse.min.js"></script>
+  <script src="/assets/js/procesar_csvs.js"></script>
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- CSS Implementing Plugins -->
+  <link rel="stylesheet" href="/assets/vendor/bootstrap-icons/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="/assets/vendor/hs-mega-menu/dist/hs-mega-menu.min.css">
+  <link rel="stylesheet" href="/assets/vendor/swiper/swiper-bundle.min.css">
+
+  <!-- CSS Unify Template -->
+  <link rel="stylesheet" href="/assets/css/theme.css">
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(function(){
+      $("#header").load("/template/header.html");
+      $("#footer").load("/template/footer.html");
+    });
+  </script>
+
+  </script>
+</head>
+
+<body>
+
+    <!-- ========== HEADER ========== -->
+    <header id="header" class="navbar navbar-expand-lg navbar-end navbar-light navbar-absolute-top navbar-show-hide bg-white"
+          data-hs-header-options='{
+            "fixMoment": 0,
+            "fixEffect": "slide"
+          }'></header>
+
+    <main id="content" role="main">
+
+        <!-- FAQ -->
+        <div class="container content-space-t-2 mt-10">
+            <div class="row">
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                <h3>Información de interés</h3>
+                </div>
+                <!-- End Col -->
+
+                <div class="col-lg-8">
+                <!-- Accordion -->
+                <div class="accordion accordion-flush" id="accordionFAQ">
+                    <!-- Accordion Item -->
+                    <div class="accordion-item">
+                    <div class="accordion-header" id="headingOne">
+                        <a class="accordion-button" role="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        ¿Habrá preboda?
+                        </a>
+                    </div>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionFAQ">
+                        <div class="accordion-body" style="color:var(--bs-gray-900)">
+                        ¡Por supuesto! Hemos organizado una pequeña preboda en <a href="https://maps.app.goo.gl/7n4S4fkvB7UaSHtS9">Babilon</a>. Empezará el viernes 12 de septiembre a las 20:30.
+                        </div>
+                    </div>
+                    </div>
+                    <!-- End Accordion Item -->
+
+                    <!-- Accordion Item -->
+                    <div class="accordion-item">
+                    <div class="accordion-header" id="headingTwo">
+                        <a class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Necesito una peluquería
+                        </a>
+                    </div>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionFAQ">
+                        <div class="accordion-body" style="color:var(--bs-gray-900)">
+                        Hemos elaborado una lista con algunas peluquerías de Santiago que hemos frecuentado y de las que tenemos buenas referencias. ¡Esperamos que os sea de ayuda!
+                        <br><br>
+                        <a href="https://maps.app.goo.gl/KSQg8dYv6JiM6FsBA">Consulta las peluquerías</a>
+                        </div>
+                    </div>
+                    </div>
+                    <!-- End Accordion Item -->
+
+                    <!-- Accordion Item -->
+                    <div class="accordion-item">
+                    <div class="accordion-header" id="headingThree">
+                        <a class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        ¿Dónde puedo comer o tomar algo en Santiago?
+                        </a>
+                    </div>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionFAQ">
+                        <div class="accordion-body" style="color:var(--bs-gray-900)">
+                        Como sabemos que buscar buenos sitios para comer en una nueva ciudad puede llegar a ser complicado, hemos recopilado en esta lista nuestros bares y restaurantes favoritos. ¡Esperamos que os gusten!
+                        <br><br>
+                        <a href="https://maps.app.goo.gl/9G1MHhLWiau2QdsVA">Consulta los bares y restaurantes</a>
+                        </div>
+                    </div>
+                    </div>
+                    <!-- End Accordion Item -->
+
+                    <!-- Accordion Item -->
+                    <div class="accordion-item">
+                    <div class="accordion-header" id="headingFour">
+                        <a class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        Quiero conocer Santiago
+                        </a>
+                    </div>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headinFour" data-bs-parent="#accordionFAQ">
+                        <div class="accordion-body" style="color:var(--bs-gray-900)">
+                        Para aquellos que os quedéis algo más de tiempo por Santiago y tengáis ganas de disfrutarla como gallegos, os compartimos una lista con nuestras zonas favoritas desde la Catedral hasta las mejores zonas para tomar algo.
+                        <br><br>
+                        <a href="https://maps.app.goo.gl/2ECZzFKWwNMyZpKk6">Consulta sitios de interés</a>
+                        </div>
+                    </div>
+                    </div>
+                    <!-- End Accordion Item -->
+                    
+                </div>
+                <!-- End Accordion -->
+                </div>
+                <!-- End Col -->
+            </div>
+            <!-- End Row -->
+        </div>
+        <!-- End FAQ -->
+        </main>
+
+        <!-- ========== FOOTER ========== -->
+  <footer id="footer" class="bg-dark"></footer>
+  <!-- ========== END FOOTER ========== -->
+
+  <!-- ========== SECONDARY CONTENTS ========== -->
+  <!-- Go To -->
+  <a class="js-go-to go-to position-fixed" href="javascript:;" style="visibility: hidden;"
+     data-hs-go-to-options='{
+       "offsetTop": 700,
+       "position": {
+         "init": {
+           "right": "2rem"
+         },
+         "show": {
+           "bottom": "2rem"
+         },
+         "hide": {
+           "bottom": "-2rem"
+         }
+       }
+     }'>
+    <i class="bi-chevron-up"></i>
+  </a>
+  <!-- ========== END SECONDARY CONTENTS ========== -->
+
+  <!-- JS Global Compulsory  -->
+  <script src="/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- JS Implementing Plugins -->
+  <script src="/assets/vendor/hs-header/dist/hs-header.min.js"></script>
+  <script src="/assets/vendor/hs-mega-menu/dist/hs-mega-menu.min.js"></script>
+  <script src="/assets/vendor/hs-go-to/dist/hs-go-to.min.js"></script>
+  <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- JS Unify -->
+  <script src="/assets/js/theme.min.js"></script>
+
+  <!-- JS Countdown -->
+ <script src="/assets/vendor/countdown/countdown.js"></script>
+
+  <!-- JS Plugins Init. -->
+  <script>
+    (function() {
+      // INITIALIZATION OF NAVBAR
+      // =======================================================
+      new HSHeader('#header').init()
+
+
+      // INITIALIZATION OF MEGA MENU
+      // =======================================================
+      const megaMenu = new HSMegaMenu('.js-mega-menu', {
+        desktop: {
+          position: 'left'
+        }
+      })
+
+
+      // INITIALIZATION OF GO TO
+      // =======================================================
+      new HSGoTo('.js-go-to')
+    })()
+  </script>
+</body>

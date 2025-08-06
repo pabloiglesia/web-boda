@@ -39,6 +39,8 @@
       $("#lista-hoteles").load("/template/hoteles.html");
     });
   </script>
+
+
 </head>
 
 <body>
@@ -106,6 +108,8 @@
   </a>
   <!-- ========== END SECONDARY CONTENTS ========== -->
 
+
+
   <!-- JS Global Compulsory  -->
   <script src="/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
@@ -142,6 +146,26 @@
       // =======================================================
       new HSGoTo('.js-go-to')
     })()
+  </script>
+  <script>
+    function scrollToHash(hash) {
+      if(hash) {
+        var el = document.querySelector(hash);
+        if(el) el.scrollIntoView({behavior: "smooth"});
+      }
+    }
+
+    // Solo ejecuta el scroll si hay hash en la URL
+    if(window.location.hash) {
+      setTimeout(function() {
+        scrollToHash(window.location.hash);
+      }, 300); // Espera a que todo esté inicializado (ajusta el tiempo si es necesario)
+    }
+
+    // También escucha cambios de hash estando ya en index.html
+    window.addEventListener('hashchange', function() {
+      scrollToHash(window.location.hash);
+    });
   </script>
 </body>
 </html>
